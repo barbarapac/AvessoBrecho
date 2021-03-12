@@ -75,3 +75,4 @@ H:\Projeto HTML\UTFPR\Git\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\Ec
 H:\Projeto HTML\UTFPR\Git\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.genruntimeconfig.cache
 H:\Projeto HTML\UTFPR\Git\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.csproj.CopyComplete
 H:\Projeto HTML\UTFPR\Git\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.csprojAssemblyReference.cache
+C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.csprojAssemblyReference.cache

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\Projeto HTML\\UTFPR\\Git\\AvessoBrecho\\EcommerceAvessoBrecho\\EcommerceAvessoBrecho.csproj": {}
+    "C:\\Projetos\\AvessoBrecho\\EcommerceAvessoBrecho\\EcommerceAvessoBrecho.csproj": {}
   },
   "projects": {
-    "H:\\Projeto HTML\\UTFPR\\Git\\AvessoBrecho\\EcommerceAvessoBrecho\\EcommerceAvessoBrecho.csproj": {
+    "C:\\Projetos\\AvessoBrecho\\EcommerceAvessoBrecho\\EcommerceAvessoBrecho.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Projeto HTML\\UTFPR\\Git\\AvessoBrecho\\EcommerceAvessoBrecho\\EcommerceAvessoBrecho.csproj",
+        "projectUniqueName": "C:\\Projetos\\AvessoBrecho\\EcommerceAvessoBrecho\\EcommerceAvessoBrecho.csproj",
         "projectName": "EcommerceAvessoBrecho",
-        "projectPath": "H:\\Projeto HTML\\UTFPR\\Git\\AvessoBrecho\\EcommerceAvessoBrecho\\EcommerceAvessoBrecho.csproj",
+        "projectPath": "C:\\Projetos\\AvessoBrecho\\EcommerceAvessoBrecho\\EcommerceAvessoBrecho.csproj",
         "packagesPath": "C:\\Users\\Renan\\.nuget\\packages\\",
-        "outputPath": "H:\\Projeto HTML\\UTFPR\\Git\\AvessoBrecho\\EcommerceAvessoBrecho\\obj\\",
+        "outputPath": "C:\\Projetos\\AvessoBrecho\\EcommerceAvessoBrecho\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
