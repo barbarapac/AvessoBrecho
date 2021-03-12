@@ -8,7 +8,30 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
+
     <header>
+        <div class="containerCSS">
+            <div id="div_topo">
+                <div id="div_logo">
+                    <a class="aMenu" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/Brand - Horizontal.svg" id="logo" /></a>
+                </div>
+
+                <div id="div_menu">
+                    <a asp-area="" asp-controller="Home" asp-action="Index">Novidades</a>
+                    <a class="aMenu" asp-area="" asp-controller="Home" asp-action="Index">Roupas</a>
+                    <a class="aMenu" asp-area="" asp-controller="Home" asp-action="Index">Calçados</a>
+                    <a class="aMenu" asp-area="" asp-controller="Home" asp-action="Index">Promoções</a>
+                </div>
+
+                <div id="div_icones">
+                    <a asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/icons - Shopping.svg" id="Shop" /></a>
+                    <a asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/icons - User.svg" id="User" /></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    @*<header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">EcommerceAvessoBrecho</a>
@@ -28,7 +51,7 @@
                 </div>
             </div>
         </nav>
-    </header>
+    </header>*@
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()

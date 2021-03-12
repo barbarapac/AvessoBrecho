@@ -1,58 +1,70 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+﻿header {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    opacity: 1;
+    height: 84px;
 }
 
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
+/*---IDS---*/
+#div_topo {
+    top: 0px;
+    left: 0px;
+    width: 1366px;
+    height: 84px;
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+#div_logo {
+    float: left;
+    width: 128px;
+    height: 23px;
+    margin: 31px 0 30px 31px;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+#div_menu {
+    float: left;
+    width: 474px;
+    height: 24px;
+    margin: 30px 286px 30px 321px;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+#div_menu a {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-montserrat);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    text-align: left;
+    font: normal normal normal 16px/24px Montserrat;
+    letter-spacing: 0px;
+    color: #474747;
+    opacity: 1;
 }
 
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+#div_icones {
+    float: left;
+    width: 91px;
+    height: 18px;
+    margin: 32px 35px 32px 0;
 }
 
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+#Shop {
+    float: left;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
+#User {
+    float: right;
+}
+
+/*---Classes---*/
+.containerCSS {
+    width: 1366px;
+    margin: 0 auto;
+}
+
+.aMenu {
+    padding-left: 48px;
+}
+
+
+
+
 html {
   position: relative;
   min-height: 100%;
@@ -69,3 +81,4 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
