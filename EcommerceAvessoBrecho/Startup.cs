@@ -1,13 +1,14 @@
+using EcommerceAvessoBrecho.DataBase.Context;
+using EcommerceAvessoBrecho.DataBase.DataService;
+using EcommerceAvessoBrecho.Repositories;
+using EcommerceAvessoBrecho.Repositories.IRepository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace EcommerceAvessoBrecho
 {
@@ -20,14 +21,27 @@ namespace EcommerceAvessoBrecho
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            string connectionString = Configuration.GetConnectionString("DefaultConnectionDB");
+
+            services.AddMvc(options => options.EnableEndpointRouting = false);
+            services.AddDistributedMemoryCache();
+            services.AddSession();
+
+            services.AddDbContext<AppDbContext>(options =>
+                options.UseSqlServer(connectionString)
+            );
+
+            services.AddTransient<IDataService, DataService>();
+            services.AddTransient<IProdutoRepository, ProdutoRepository>();
+            services.AddTransient<IPedidoRepository, PedidoRepository>();
+            services.AddTransient<IClienteRepository, ClienteRepository>();
             services.AddControllersWithViews();
+
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serviceProvider)
         {
             if (env.IsDevelopment())
             {
@@ -36,15 +50,16 @@ namespace EcommerceAvessoBrecho
             else
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            app.UseHttpsRedirection();
+            app.UseStaticFiles();
             app.UseRouting();
-
-            app.UseAuthorization();
+            app.UseSession();
+            //app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
@@ -52,6 +67,9 @@ namespace EcommerceAvessoBrecho
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            var dataService = serviceProvider.GetRequiredService<IDataService>();
+            dataService.InicializaDBAsync(serviceProvider).Wait();
         }
     }
 }

@@ -1,0 +1,135 @@
+[
+  {
+    "Codigo": "001",
+    "Nome": "Top Rosa",
+    "Descricao": "Top de malha, tamanho M.",
+    "Preco": 10.00,
+    "Categoria": "Roupas / Tops",
+    "Src1": "http://cdn.shopify.com/s/files/1_1/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src2": "http://cdn.shopify.com/s/files/1_2/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src3": "http://cdn.shopify.com/s/files/1_3/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src4": "http://cdn.shopify.com/s/files/1_4/0155/7645/products/programacao-featured_large.png?v=1411490523"
+  },
+  {
+    "Codigo": "002",
+    "Nome": "Jaqueta vintage",
+    "Descricao": "Jaqueta tecido de algodão, tamanho M.",
+    "Preco": 50.00,
+    "Categoria": "Roupas / Jaquetas",
+    "Src1": "http://cdn.shopify.com/s/files/2_1/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src2": "http://cdn.shopify.com/s/files/2_2/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src3": "http://cdn.shopify.com/s/files/2_3/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src4": "http://cdn.shopify.com/s/files/2_4/0155/7645/products/programacao-featured_large.png?v=1411490523"
+  },
+  {
+    "Codigo": "003",
+    "Nome": "Regata Rosa",
+    "Descricao": "Regata rosa, tecido de algodão, tamanho M.",
+    "Preco": 10.00,
+    "Categoria": "Roupas / Regatas",
+    "Src1": "http://cdn.shopify.com/s/files/3_1/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src2": "http://cdn.shopify.com/s/files/3_2/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src3": "http://cdn.shopify.com/s/files/3_3/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src4": "http://cdn.shopify.com/s/files/3_4/0155/7645/products/programacao-featured_large.png?v=1411490523"
+  },
+  {
+    "Codigo": "004",
+    "Nome": "Calça jeans clara",
+    "Descricao": "Calça jeans clara, tamanho 40.",
+    "Preco": 30.00,
+    "Categoria": "Roupas / Calças",
+    "Src1": "http://cdn.shopify.com/s/files/4_1/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src2": "http://cdn.shopify.com/s/files/4_2/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src3": "http://cdn.shopify.com/s/files/4_3/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src4": "http://cdn.shopify.com/s/files/4_4/0155/7645/products/programacao-featured_large.png?v=1411490523"
+  },
+  {
+    "Codigo": "005",
+    "Nome": "Calça Moon",
+    "Descricao": "Calça clara Moon, tamanho 38.",
+    "Preco": 50.00,
+    "Categoria": "Roupas / Calças",
+    "Src1": "http://cdn.shopify.com/s/files/5_1/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src2": "http://cdn.shopify.com/s/files/5_2/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src3": "http://cdn.shopify.com/s/files/5_3/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src4": "http://cdn.shopify.com/s/files/5_4/0155/7645/products/programacao-featured_large.png?v=1411490523"
+  },
+  {
+    "Codigo": "006",
+    "Nome": "Top beje",
+    "Descricao": "Top beje tecido de algodão, tamanho M.",
+    "Preco": 25.00,
+    "Categoria": "Roupas / Tops",
+    "Src1": "http://cdn.shopify.com/s/files/6_1/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src2": "http://cdn.shopify.com/s/files/6_2/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src3": "http://cdn.shopify.com/s/files/6_3/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src4": "http://cdn.shopify.com/s/files/6_4/0155/7645/products/programacao-featured_large.png?v=1411490523"
+  },
+  {
+    "Codigo": "007",
+    "Nome": "Calça jeans vintage",
+    "Descricao": "Calça jeans vintage, tamanho 42.",
+    "Preco": 50.00,
+    "Categoria": "Roupas / Calças",
+    "Src1": "http://cdn.shopify.com/s/files/7_1/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src2": "http://cdn.shopify.com/s/files/7_2/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src3": "http://cdn.shopify.com/s/files/7_3/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src4": "http://cdn.shopify.com/s/files/7_4/0155/7645/products/programacao-featured_large.png?v=1411490523"
+  },
+  {
+    "Codigo": "008",
+    "Nome": "Moletom vintage",
+    "Descricao": "Moletom vintage marrom tecido de algodão, tamanho M.",
+    "Preco": 10.00,
+    "Categoria": "Roupas / Moletons",
+    "Src1": "http://cdn.shopify.com/s/files/8_1/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src2": "http://cdn.shopify.com/s/files/8_2/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src3": "http://cdn.shopify.com/s/files/8_3/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src4": "http://cdn.shopify.com/s/files/8_4/0155/7645/products/programacao-featured_large.png?v=1411490523"
+  },
+  {
+    "Codigo": "009",
+    "Nome": "Sapato salto alto vintage",
+    "Descricao": "Sapato salto alto vintage de couro preto, tamanho 36.",
+    "Preco": 40.00,
+    "Categoria": "Calçados / Salto",
+    "Src1": "http://cdn.shopify.com/s/files/9_1/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src2": "http://cdn.shopify.com/s/files/9_2/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src3": "http://cdn.shopify.com/s/files/9_3/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src4": "http://cdn.shopify.com/s/files/9_4/0155/7645/products/programacao-featured_large.png?v=1411490523"
+  },
+  {
+    "Codigo": "010",
+    "Nome": "Calça jeans vintage",
+    "Descricao": "Calça jeans vintage, tamanho 38.",
+    "Preco": 50.00,
+    "Categoria": "Roupas / Calças",
+    "Src1": "http://cdn.shopify.com/s/files/10_1/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src2": "http://cdn.shopify.com/s/files/10_2/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src3": "http://cdn.shopify.com/s/files/10_3/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src4": "http://cdn.shopify.com/s/files/10_4/0155/7645/products/programacao-featured_large.png?v=1411490523"
+  },
+  {
+    "Codigo": "011",
+    "Nome": "Top preto",
+    "Descricao": "Top preto, tecido de algodão, tamanho M.",
+    "Preco": 15.00,
+    "Categoria": "Roupas / Tops",
+    "Src1": "http://cdn.shopify.com/s/files/11_1/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src2": "http://cdn.shopify.com/s/files/11_2/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src3": "http://cdn.shopify.com/s/files/11_3/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src4": "http://cdn.shopify.com/s/files/11_4/0155/7645/products/programacao-featured_large.png?v=1411490523"
+  },
+  {
+    "Codigo": "012",
+    "Nome": "Bota de couro preto",
+    "Descricao": "Bota de couro, cor preta, tamanho 39.",
+    "Preco": 40.00,
+    "Categoria": "Calçados / Botas",
+    "Src1": "http://cdn.shopify.com/s/files/12_1/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src2": "http://cdn.shopify.com/s/files/12_2/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src3": "http://cdn.shopify.com/s/files/12_3/0155/7645/products/programacao-featured_large.png?v=1411490523",
+    "Src4": "http://cdn.shopify.com/s/files/12_4/0155/7645/products/programacao-featured_large.png?v=1411490523"
+  }
+]
+
