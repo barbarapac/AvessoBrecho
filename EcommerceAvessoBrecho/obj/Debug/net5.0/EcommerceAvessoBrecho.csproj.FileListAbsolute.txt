@@ -189,3 +189,4 @@ C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\bin\Debug\net5.0\zh-Hans\Microsof
 C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
+C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.csprojAssemblyReference.cache
