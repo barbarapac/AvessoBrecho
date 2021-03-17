@@ -19,8 +19,22 @@ using EcommerceAvessoBrecho;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\Views\_ViewImports.cshtml"
+using EcommerceAvessoBrecho.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\Views\_ViewImports.cshtml"
+using EcommerceAvessoBrecho.ViewsModels;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9e3e4e1a23058bdd98a7c4ad2e3189c0ceb1556a", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4ba31336c9bcf6ef6a879bcfb74d0bb96baa65aa", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0d1861ace2474363798c4bdd485993b40bdc95bb", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-area", "", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -61,7 +75,7 @@ using EcommerceAvessoBrecho;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n<div id=\"div_Home\">\r\n    <div id=\"div_HomeTop\">\r\n        <div id=\"div_HomeCaminho\">\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9e3e4e1a23058bdd98a7c4ad2e3189c0ceb1556a4600", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9e3e4e1a23058bdd98a7c4ad2e3189c0ceb1556a4985", async() => {
                 WriteLiteral("<label class=\"labelCaminhoHome\">");
 #nullable restore
 #line 8 "C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\Views\Home\Index.cshtml"
@@ -89,7 +103,7 @@ using EcommerceAvessoBrecho;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "9e3e4e1a23058bdd98a7c4ad2e3189c0ceb1556a6517", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "9e3e4e1a23058bdd98a7c4ad2e3189c0ceb1556a6902", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

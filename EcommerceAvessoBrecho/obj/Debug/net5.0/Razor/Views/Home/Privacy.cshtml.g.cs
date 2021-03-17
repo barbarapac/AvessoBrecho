@@ -19,8 +19,22 @@ using EcommerceAvessoBrecho;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\Views\_ViewImports.cshtml"
+using EcommerceAvessoBrecho.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\Views\_ViewImports.cshtml"
+using EcommerceAvessoBrecho.ViewsModels;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d8ddb6bffa5a9b264bf8f89038bf03c234083fd3", @"/Views/Home/Privacy.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4ba31336c9bcf6ef6a879bcfb74d0bb96baa65aa", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0d1861ace2474363798c4bdd485993b40bdc95bb", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Privacy : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

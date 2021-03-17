@@ -12,12 +12,13 @@ namespace EcommerceAvessoBrecho.Repositories
 {
     public class ProdutoRepository : BaseRepository<Produto>, IProdutoRepository
     {
-        public ProdutoRepository(IConfiguration configuration, AppDbContext context) 
+        public ProdutoRepository(IConfiguration configuration, AppDbContext context)
             : base(configuration, context) { }
 
         public async Task<IList<Produto>> GetProdutosAsync()
         {
             return await dbSet
+                    .Where(p => p.Disponivel == true)
                     .Include(prod => prod.Categoria)
                     .ToListAsync();
         }
@@ -28,7 +29,8 @@ namespace EcommerceAvessoBrecho.Repositories
 
             if (!string.IsNullOrEmpty(pesquisa))
             {
-                query = query.Where(q => q.Nome.Contains(pesquisa));
+                query = query.Where(q => q.Nome.Contains(pesquisa)
+                                         && q.Disponivel == true);
             }
 
             query = query

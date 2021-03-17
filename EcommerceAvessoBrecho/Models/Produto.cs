@@ -9,7 +9,8 @@ namespace EcommerceAvessoBrecho.Models
     {
         public Produto() { }
 
-        public Produto(string codigo, string nome, string descricao, decimal preco, Categoria categoria)
+        public Produto(string codigo, string nome, string descricao, decimal preco, 
+            Categoria categoria)
         {
             this.Codigo = codigo;
             this.Nome = nome;
@@ -37,6 +38,12 @@ namespace EcommerceAvessoBrecho.Models
         [Column(TypeName = "decimal(8,2)")]
         [Required(ErrorMessage = "Preço é obrigatório")]
         public decimal Preco { get; private set; }
+
+        [DataMember]
+        public bool Disponivel { get; set; } = true;
+
+        [DataMember]
+        public bool Promocao { get; set; } = false;
 
         [DataMember]
         public DateTime DataCadastro { get; private set; }
