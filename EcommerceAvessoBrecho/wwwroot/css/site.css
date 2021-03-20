@@ -1,203 +1,8 @@
-﻿:root {
-    /* Colors: */
-    --colors-bases-dark: #EEEEEE;
-    --colors-bases-darkest: #C3C3C3;
-    --colors-bases-light: #6E6E6E;
-    --colors-bases-lightest: #999999;
-    --colors-bases-neutral: #191919;
-    --colors-primary-dark: #1A333C;
-    --colors-primary-light: #1F9399;
-    --colors-primary-neutral: #355154;
-    --colors-secondary-dark: #B25959;
-    --colors-secondary-light: #FFCBCB;
-    --colors-secondary-neutral: #FFA9BA;
-    --colors-support-error-dark: #9A1215;
-    --colors-support-error-light: #F29C79;
-    --colors-support-error-neutral: #D63C24;
-    --colors-support-info-dark: #014F96;
-    --colors-support-info-light: #61D0F1;
-    --colors-support-info-neutral: #0288D1;
-    --colors-support-success-dark: #197C2C;
-    --colors-support-success-light: #93E684;
-    --colors-support-success-neutral: #32AD34;
-    --colors-support-warning-dark: #B78E00;
-    --colors-support-warning-light: #FFE866;
-    --colors-support-warning-neutral: #FFD000;
-    /* Font/text values */
-    --unnamed-font-family-montserrat: Montserrat;
-    --unnamed-font-style-normal: normal;
-    --unnamed-font-weight-300: 300px;
-    --unnamed-font-weight-medium: medium;
-    --unnamed-font-weight-normal: normal;
-    --unnamed-font-size-10: 10px;
-    --unnamed-font-size-12: 12px;
-    --unnamed-font-size-14: 14px;
-    --unnamed-font-size-16: 16px;
-    --unnamed-font-size-20: 20px;
-    --unnamed-font-size-24: 24px;
-    --unnamed-font-size-34: 34px;
-    --unnamed-font-size-48: 48px;
-    --unnamed-font-size-60: 60px;
-    --unnamed-font-size-96: 96px;
-    --unnamed-character-spacing-0: 0px;
-    --unnamed-character-spacing-0-01: 0.01px;
-    --unnamed-character-spacing--0-03: -0.03px;
-    --unnamed-character-spacing--0-14: -0.14px;
-    --unnamed-line-spacing-15: 15px;
-    --unnamed-line-spacing-18: 18px;
-    --unnamed-line-spacing-21: 21px;
-    --unnamed-line-spacing-24: 24px;
-    --unnamed-line-spacing-30: 30px;
-    --unnamed-line-spacing-32: 32px;
-    --unnamed-line-spacing-40: 40px;
-    --unnamed-line-spacing-48: 48px;
-    --unnamed-line-spacing-60: 60px;
-    --unnamed-line-spacing-90: 90px;
-    --unnamed-text-transform-uppercase: uppercase;
-}
-
-/* Character Styles */
-.typography-dark-headline-h1 {
-    font-family: var(--unnamed-font-family-montserrat);
-    font-style: var(--unnamed-font-style-normal);
-    font-weight: var(--unnamed-font-weight-300);
-    font-size: var(--unnamed-font-size-96);
-    line-height: var(--unnamed-line-spacing-90);
-    letter-spacing: var(--unnamed-character-spacing--0-14);
-    color: var(--unnamed-color-474747);
-}
-
-.typography-dark-headline-h2 {
-    font-family: var(--unnamed-font-family-montserrat);
-    font-style: var(--unnamed-font-style-normal);
-    font-weight: var(--unnamed-font-weight-300);
-    font-size: var(--unnamed-font-size-60);
-    line-height: var(--unnamed-line-spacing-60);
-    letter-spacing: var(--unnamed-character-spacing--0-03);
-    color: var(--unnamed-color-474747);
-}
-
-.typography-dark-headline-h3 {
-    font-family: var(--unnamed-font-family-montserrat);
-    font-style: var(--unnamed-font-style-normal);
-    font-weight: var(--unnamed-font-weight-normal);
-    font-size: var(--unnamed-font-size-48);
-    line-height: var(--unnamed-line-spacing-48);
-    letter-spacing: var(--unnamed-character-spacing-0);
-    color: var(--unnamed-color-474747);
-}
-
-.typography-dark-headline-h4 {
-    font-family: var(--unnamed-font-family-montserrat);
-    font-style: var(--unnamed-font-style-normal);
-    font-weight: var(--unnamed-font-weight-normal);
-    font-size: var(--unnamed-font-size-34);
-    line-height: var(--unnamed-line-spacing-40);
-    letter-spacing: var(--unnamed-character-spacing-0-01);
-    color: var(--unnamed-color-474747);
-}
-
-.typography-dark-headline-h5 {
-    font-family: var(--unnamed-font-family-montserrat);
-    font-style: var(--unnamed-font-style-normal);
-    font-weight: var(--unnamed-font-weight-normal);
-    font-size: var(--unnamed-font-size-24);
-    line-height: var(--unnamed-line-spacing-32);
-    letter-spacing: var(--unnamed-character-spacing-0);
-    color: var(--unnamed-color-474747);
-}
-
-.typography-dark-headline-h6 {
-    font-family: var(--unnamed-font-family-montserrat);
-    font-style: var(--unnamed-font-style-normal);
-    font-weight: var(--unnamed-font-weight-medium);
-    font-size: var(--unnamed-font-size-20);
-    line-height: var(--unnamed-line-spacing-30);
-    letter-spacing: var(--unnamed-character-spacing-0);
-    color: var(--unnamed-color-474747);
-}
-
-.typography-dark-subtitle-s1 {
-    font-family: var(--unnamed-font-family-montserrat);
-    font-style: var(--unnamed-font-style-normal);
-    font-weight: var(--unnamed-font-weight-normal);
-    font-size: var(--unnamed-font-size-16);
-    line-height: var(--unnamed-line-spacing-24);
-    letter-spacing: var(--unnamed-character-spacing-0);
-    color: var(--unnamed-color-474747);
-}
-
-.typography-dark-subtitle-s2 {
-    font-family: var(--unnamed-font-family-montserrat);
-    font-style: var(--unnamed-font-style-normal);
-    font-weight: var(--unnamed-font-weight-medium);
-    font-size: var(--unnamed-font-size-14);
-    line-height: var(--unnamed-line-spacing-21);
-    letter-spacing: var(--unnamed-character-spacing-0);
-    color: var(--unnamed-color-474747);
-}
-
-.typography-dark-body-b1 {
-    font-family: var(--unnamed-font-family-montserrat);
-    font-style: var(--unnamed-font-style-normal);
-    font-weight: var(--unnamed-font-weight-normal);
-    font-size: var(--unnamed-font-size-16);
-    line-height: var(--unnamed-line-spacing-24);
-    letter-spacing: var(--unnamed-character-spacing-0-01);
-    color: var(--unnamed-color-474747);
-}
-
-.typography-dark-body-b2 {
-    font-family: var(--unnamed-font-family-montserrat);
-    font-style: var(--unnamed-font-style-normal);
-    font-weight: var(--unnamed-font-weight-normal);
-    font-size: var(--unnamed-font-size-14);
-    line-height: var(--unnamed-line-spacing-21);
-    letter-spacing: var(--unnamed-character-spacing-0);
-    color: var(--unnamed-color-474747);
-}
-
-.typography-dark-buttton-btn1 {
-    font-family: var(--unnamed-font-family-montserrat);
-    font-style: var(--unnamed-font-style-normal);
-    font-weight: var(--unnamed-font-weight-medium);
-    font-size: var(--unnamed-font-size-14);
-    line-height: var(--unnamed-line-spacing-21);
-    letter-spacing: var(--unnamed-character-spacing-0);
-    color: var(--unnamed-color-474747);
-}
-
-.typography-dark-caption-c1 {
-    font-family: var(--unnamed-font-family-montserrat);
-    font-style: var(--unnamed-font-style-normal);
-    font-weight: var(--unnamed-font-weight-normal);
-    font-size: var(--unnamed-font-size-12);
-    line-height: var(--unnamed-line-spacing-18);
-    letter-spacing: var(--unnamed-character-spacing-0);
-    color: var(--unnamed-color-474747);
-}
-
-.typography-dark-overline-o1 {
-    font-family: var(--unnamed-font-family-montserrat);
-    font-style: var(--unnamed-font-style-normal);
-    font-weight: var(--unnamed-font-weight-normal);
-    font-size: var(--unnamed-font-size-10);
-    line-height: var(--unnamed-line-spacing-15);
-    letter-spacing: var(--unnamed-character-spacing-0-01);
-    color: var(--unnamed-color-474747);
-    text-transform: var(--unnamed-text-transform-uppercase);
-}
-
-/*------------------------------- TAGs -------------------------------*/
+﻿/*------------------------------- TAGs -------------------------------*/
 
 html {
     position: relative;
-    min-height: 100%;
-}
-
-body {
-    /* Margin bottom by footer height */
-    margin-bottom: 120px;
+    /*min-height: 100%;*/
 }
 
 header {
@@ -277,7 +82,7 @@ footer {
 #div_iconfooter {
     float: left;
     height: 20px;
-    margin: 50px 0;
+    margin: 50px 0 50px 20px;
 }
 
 #div_logofooter {
@@ -299,7 +104,7 @@ footer {
     top: 0;
     left: 0;
     width: 1238px;
-    height: 128px;
+    height: 142px;
     margin: 0 auto;
 }
 
@@ -311,6 +116,15 @@ footer {
 #div_HomeBusca {
     float: right;
     margin: 40px 0;
+}
+
+#div_HomeProdutos {
+    clear: both;
+    top: 0;
+    left: 0;
+    width: 1260px;
+    height: 1300px;
+    margin: 0 20px 0 70px;
 }
 
 /*------------------------------- Classes -------------------------------*/
@@ -378,7 +192,8 @@ footer {
 .buttonSecundary:hover {
     background-color: #335154;
     color: white;
-    transition-duration: 0.3s;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
 }
 
 .buttonSecundary:disabled {
@@ -417,6 +232,60 @@ footer {
 
 ::-webkit-input-placeholder {
     color: #BDBDBD;
+}
+
+.div_Produtos {
+    float: left;
+    width: 313px;
+    height: 391px;
+}
+
+.div_ImagemProduto {
+    width: 297px;
+    height: 299px;
+    border-radius: 16px;
+    opacity: 1;
+}
+
+.div_ImagemProduto img {
+    width: 297px;
+    height: 299px;
+    border-radius: 16px;
+    opacity: 1;
+}
+
+/*------------------- Hover Imagem Produto ---------------------*/
+
+.div_ImagemProduto img:hover {
+    opacity: 0.9;
+}
+
+.div_ImagemProduto:hover {
+    background-color: #0000001A;
+}
+
+.div_LegendaProduto {
+    width: 136px;
+    height: 44px;
+    margin: 16px 137px 0 24px;
+}
+
+.label_Descricao {
+    text-align: left;
+    font: normal normal normal 14px/21px Montserrat;
+    letter-spacing: 0px;
+    color: #474747;
+    opacity: 1;
+    margin: 0;
+}
+
+.label_Preco {
+    text-align: left;
+    font: normal normal medium 14px/21px Montserrat;
+    letter-spacing: 0px;
+    color: #474747;
+    opacity: 1;
+    margin: 0;
 }
 
 
