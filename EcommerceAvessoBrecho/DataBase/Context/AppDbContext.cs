@@ -27,5 +27,7 @@ namespace EcommerceAvessoBrecho.DataBase.Context
             modelBuilder.Entity<ItemPedido>().HasOne(t => t.Pedido);
             modelBuilder.Entity<ItemPedido>().HasOne(t => t.Produto);
         }
+
+        public DbSet<EcommerceAvessoBrecho.Models.Produto> Produto { get; set; }
     }
 }

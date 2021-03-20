@@ -25,6 +25,7 @@ namespace EcommerceAvessoBrecho
         {
             string connectionString = Configuration.GetConnectionString("DefaultConnectionDB");
 
+            //services.AddMvc();
             services.AddMvc(options => options.EnableEndpointRouting = false);
             services.AddDistributedMemoryCache();
             services.AddSession();
@@ -61,11 +62,11 @@ namespace EcommerceAvessoBrecho
             app.UseSession();
             //app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
+            app.UseMvc(routes =>
             {
-                endpoints.MapControllerRoute(
+                routes.MapRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Produto}/{action=PesquisaProduto}/{codigo?}");
             });
 
             var dataService = serviceProvider.GetRequiredService<IDataService>();

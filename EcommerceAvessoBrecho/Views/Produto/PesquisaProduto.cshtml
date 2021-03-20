@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+@model BuscaProdutosViewModel;
+
+<div id="div_Home">
+    <div id="div_HomeTop">
+        <div id="div_HomeCaminho">
+            <a asp-area="" asp-controller="Home" asp-action="Index"><label class="labelCaminhoHome">@ViewData["Title"]</label></a>
+            <img src="~/images/keyboard_arrow_down-24px-2.svg" />
+            <label class="labelCaminhoHome">@ViewData["Title"]</label>
+        </div>
+
+        <div id="div_HomeBusca">
+            <form asp-action="pesquisaproduto">
+                <input type="text" asp-for="@Model.Pesquisa" name="pesquisa"
+                       class="inputTextFiel"
+                       style="margin-right: 32px"
+                       placeholder="Categoria ou produto" />
+                <span class="input-group-btn">
+                    <button class="buttonSecundary" type="submit">Buscar</button>
+                </span>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+@{ var produtos = Model.Produtos;
+
+    var categorias =
+        produtos
+            .Select(m => m.Categoria)
+            .Distinct();
+}
+
+<div id="div_HomeProdutos">
+    <div class="containerCSS">
+        @{ const int TAMANHO_PAGINA = 4;
+
+            int linhas = (int)Math.Ceiling((double)produtos.Count() / TAMANHO_PAGINA);
+        }
+        @for (int linha = 0; linha < linhas; linha++)
+        {
+
+            <div class="item @(linha == 0 ? "active" : "")">
+                <div class="row">
+                    @{ var produtosDaPagina = produtos.Skip(linha * TAMANHO_PAGINA).Take(TAMANHO_PAGINA); }
+                    @foreach (var produto in produtosDaPagina)
+                    {
+
+                        <div class="div_Produtos">
+                            <div class="div_ImagemProduto">
+                                <img class="img-produto center-block" src="/images/produtos/large_@(produto.Codigo)_1.jpg" />
+                            </div>
+                            <div class="div_LegendaProduto">
+                                <label class="label_Descricao">@produto.Nome</label>
+                                <br>
+                                <label class="label_Preco">R$ @produto.Preco</label>
+                                @*<div class="text-center">
+                                        <a asp-action="carrinho"
+                                            asp-route-codigo="@produto.Codigo"
+                                            class="btn btn-success">Adicionar</a>
+                                    </div>*@
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
