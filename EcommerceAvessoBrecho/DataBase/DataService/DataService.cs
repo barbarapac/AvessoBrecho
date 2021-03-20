@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace EcommerceAvessoBrecho.DataBase.DataService
@@ -29,7 +30,7 @@ namespace EcommerceAvessoBrecho.DataBase.DataService
 
         private async Task<List<Roupa>> GetProdutosAsync()
         {
-            var json = await File.ReadAllTextAsync("produtos.json");
+            var json = await File.ReadAllTextAsync("produtos.json", Encoding.GetEncoding("iso-8859-1"));
             return JsonConvert.DeserializeObject<List<Roupa>>(json);
         }
     }

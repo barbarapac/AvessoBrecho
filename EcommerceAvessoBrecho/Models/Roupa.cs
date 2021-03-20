@@ -7,5 +7,6 @@
         public string Descricao;
         public decimal Preco;
         public string Categoria;
+        public string Marca { get; set; }
     }
 }

@@ -51,7 +51,7 @@ namespace EcommerceAvessoBrecho.Repositories
 
                 if (!await dbSet.Where(p => p.Codigo == produto.Codigo).AnyAsync())
                 {
-                    await dbSet.AddAsync(new Produto(produto.Codigo, produto.Nome, produto.Descricao, produto.Preco, categoria));
+                    await dbSet.AddAsync(new Produto(produto.Codigo, produto.Nome, produto.Descricao, produto.Preco, categoria, produto.Marca));
                 }
             }
             await context.SaveChangesAsync();

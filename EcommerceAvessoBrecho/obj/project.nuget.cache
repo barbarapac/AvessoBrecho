@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "JfOY+sCY5vERzFkkkuFn8Jzheav/WX7AamAhNHLNzO2Bt3qqMrQ0YyMGKEHNO648iHFH3vAard7D9wUfYkUijQ==",
+  "dgSpecHash": "HGGNME1EuuCeUpV03p9Mb08tdpCrIJDgRSqB0vBz3iF3SkiiARus1dPzTcZL7notWCCP8gQwY/9t0IDxPMS0vg==",
   "success": true,
   "projectFilePath": "C:\\Projetos\\AvessoBrecho\\EcommerceAvessoBrecho\\EcommerceAvessoBrecho.csproj",
   "expectedPackageFiles": [
@@ -53,7 +53,7 @@
     "C:\\Users\\babya\\.nuget\\packages\\microsoft.visualstudio.web.codegenerators.mvc\\6.0.0-preview.1.21112.2\\microsoft.visualstudio.web.codegenerators.mvc.6.0.0-preview.1.21112.2.nupkg.sha512",
     "C:\\Users\\babya\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\babya\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
-    "C:\\Users\\babya\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\babya\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\babya\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\babya\\.nuget\\packages\\system.collections.immutable\\6.0.0-preview.1.21102.12\\system.collections.immutable.6.0.0-preview.1.21102.12.nupkg.sha512",
     "C:\\Users\\babya\\.nuget\\packages\\system.componentmodel.annotations\\6.0.0-preview.1.21102.12\\system.componentmodel.annotations.6.0.0-preview.1.21102.12.nupkg.sha512",
