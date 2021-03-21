@@ -22,5 +22,13 @@ namespace EcommerceAvessoBrecho.Controllers
         {
             return View(await produtoRepository.GetProdutosAsync(pesquisa));
         }
+
+        public async Task<IActionResult> DetalheProduto(int id)
+        {
+            var produto = await produtoRepository.GetProdutoById(id);
+
+            return View(produto);
+        }
+
     }
 }

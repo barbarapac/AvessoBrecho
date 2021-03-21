@@ -10,10 +10,16 @@ using System.Threading.Tasks;
 
 namespace EcommerceAvessoBrecho.Repositories
 {
-    public class ProdutoRepository : BaseRepository<Produto>, IProdutoRepository
+        public class ProdutoRepository : BaseRepository<Produto>, IProdutoRepository
     {
         public ProdutoRepository(IConfiguration configuration, AppDbContext context)
             : base(configuration, context) { }
+
+        public async Task<BuscaProdutosViewModel> GetProdutoById(int id)
+        {
+            IQueryable<Produto> query = dbSet;
+            return new BuscaProdutosViewModel(await query.FirstOrDefaultAsync(p => p.Id == id));
+        }
 
         public async Task<IList<Produto>> GetProdutosAsync()
         {

@@ -51,17 +51,14 @@
 
                         <div class="div_Produtos">
                             <div class="div_ImagemProduto">
-                                <img src="/images/produtos/large_@(produto.Codigo)_1.jpg" />
+                                <a asp-area="" asp-controller="Produto" asp-action="DetalheProduto" asp-route-Id="@produto.Id">
+                                    <img src="/images/produtos/large_@(produto.Codigo)_1.jpg" />
+                                </a>
                             </div>
                             <div class="div_LegendaProduto">
                                 <label class="label_Descricao">@produto.Nome</label>
                                 <br>
                                 <label class="label_Preco">R$ @produto.Preco</label>
-                                @*<div class="text-center">
-                                        <a asp-action="carrinho"
-                                            asp-route-codigo="@produto.Codigo"
-                                            class="btn btn-success">Adicionar</a>
-                                    </div>*@
                             </div>
                         </div>
                     }
