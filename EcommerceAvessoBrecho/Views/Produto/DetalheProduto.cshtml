@@ -15,6 +15,12 @@
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Produto.Nome)
         </dt>
+        <div class="text-center">
+            <a asp-controller="Pedido"
+               asp-action="carrinho"
+               asp-route-codigo="@produto.Codigo"
+               class="btn btn-success">Comprar</a>
+        </div>
         <div class="div_Produtos">
             <div class="div_ImagemProduto">
                 <img src="/images/produtos/large_@(produto.Codigo)_1.jpg" />

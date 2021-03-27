@@ -7,7 +7,10 @@ namespace EcommerceAvessoBrecho.Repositories.IRepository
     {
         Task<Pedido> GetPedidoAsync();
         Task AddItemAsync(string codigo);
-        Task<Pedido> UpdateCadastroAsync(Cliente cliente);
+        Task<Pedido> UpdateClienteAsync(Cliente cliente);
+        Task<ItemPedido> GetItemPedidoAsync(int itemPedidoId);
+        Task RemoveItemPedidoAsync(int itemPedidoId);
+
         //Task<UpdateQuantidadeResponse> UpdateQuantidadeAsync(ItemPedido itemPedido);
     }
 }

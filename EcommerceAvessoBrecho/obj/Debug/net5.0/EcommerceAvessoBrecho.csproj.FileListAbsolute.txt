@@ -191,3 +191,4 @@ C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoB
 C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.genruntimeconfig.cache
 C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.csprojAssemblyReference.cache
 C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\Razor\Views\Produto\DetalheProduto.cshtml.g.cs
+C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\Razor\Views\Pedido\Carrinho.cshtml.g.cs

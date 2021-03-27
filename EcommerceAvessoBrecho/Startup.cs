@@ -4,6 +4,7 @@ using EcommerceAvessoBrecho.Repositories;
 using EcommerceAvessoBrecho.Repositories.IRepository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -25,7 +26,6 @@ namespace EcommerceAvessoBrecho
         {
             string connectionString = Configuration.GetConnectionString("DefaultConnectionDB");
 
-            //services.AddMvc();
             services.AddMvc(options => options.EnableEndpointRouting = false);
             services.AddDistributedMemoryCache();
             services.AddSession();
@@ -38,6 +38,8 @@ namespace EcommerceAvessoBrecho
             services.AddTransient<IProdutoRepository, ProdutoRepository>();
             services.AddTransient<IPedidoRepository, PedidoRepository>();
             services.AddTransient<IClienteRepository, ClienteRepository>();
+            services.AddTransient<IHttpHelper, HttpHelper>();
+            services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
             services.AddControllersWithViews();
 
         }
