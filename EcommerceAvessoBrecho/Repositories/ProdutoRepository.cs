@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace EcommerceAvessoBrecho.Repositories
 {
-        public class ProdutoRepository : BaseRepository<Produto>, IProdutoRepository
+    public class ProdutoRepository : BaseRepository<Produto>, IProdutoRepository
     {
         public ProdutoRepository(IConfiguration configuration, AppDbContext context)
             : base(configuration, context) { }
@@ -24,7 +24,7 @@ namespace EcommerceAvessoBrecho.Repositories
         public async Task<IList<Produto>> GetProdutosAsync()
         {
             return await dbSet
-                    .Where(p => p.Disponivel == true)
+                    .Where(p => p.Disponivel == true && !(p.Promocao))
                     .Include(prod => prod.Categoria)
                     .ToListAsync();
         }
@@ -45,6 +45,15 @@ namespace EcommerceAvessoBrecho.Repositories
             return new BuscaProdutosViewModel(await query.ToListAsync(), pesquisa);
         }
 
+        public async Task<IList<Produto>> GetProdutosPromocaoAsync()
+        {
+
+            return await dbSet
+                    .Where(p => p.Disponivel == true && p.Promocao)
+                    .Include(prod => prod.Categoria)
+                    .ToListAsync();
+        }
+
         public async Task SaveProdutosAsync(List<Roupa> roupas)
         {
             await SaveCategorias(roupas);
@@ -57,7 +66,9 @@ namespace EcommerceAvessoBrecho.Repositories
 
                 if (!await dbSet.Where(p => p.Codigo == produto.Codigo).AnyAsync())
                 {
-                    await dbSet.AddAsync(new Produto(produto.Codigo, produto.Nome, produto.Descricao, produto.Preco, categoria, produto.Marca));
+                    await dbSet.AddAsync(new Produto(produto.Codigo, produto.Nome, produto.Descricao, 
+                        produto.Preco, categoria, produto.Marca, produto.Promocao, 
+                        produto.PrecoPromocional, produto.SubDescricao));
                 }
             }
             await context.SaveChangesAsync();

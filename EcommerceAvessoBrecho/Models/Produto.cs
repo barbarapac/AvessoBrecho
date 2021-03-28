@@ -10,7 +10,7 @@ namespace EcommerceAvessoBrecho.Models
         public Produto() { }
 
         public Produto(string codigo, string nome, string descricao, decimal preco, 
-            Categoria categoria, string marca)
+            Categoria categoria, string marca, bool promocao, decimal precoPromocional, string subDescricao)
         {
             this.Codigo = codigo;
             this.Nome = nome;
@@ -19,6 +19,9 @@ namespace EcommerceAvessoBrecho.Models
             this.DataCadastro = DateTime.Now;
             this.Categoria = categoria;
             this.Marca = marca;
+            this.Promocao = promocao;
+            this.SubDescricao = subDescricao;
+            this.PrecoPromocional = precoPromocional;
         }
 
         [DataMember]
@@ -44,6 +47,15 @@ namespace EcommerceAvessoBrecho.Models
         [Required(ErrorMessage = "Marca é obrigatória")]
         [StringLength(60, ErrorMessage = "Descrição deve ter em 1 e 60 caractéres", MinimumLength = 5)]
         public string Marca { get; private set; }
+
+        [DataMember]
+        [Column(TypeName = "decimal(8,2)")]
+        public decimal PrecoPromocional { get; private set; } = 0;
+
+        [DataMember]
+        [Required(ErrorMessage = "Sub descrição é obrigatória")]
+        [StringLength(300, ErrorMessage = "Sub descrição deve ter em 5 e 300 caractéres", MinimumLength = 5)]
+        public string SubDescricao { get; private set; }
 
         [DataMember]
         public bool Disponivel { get; set; } = true;
