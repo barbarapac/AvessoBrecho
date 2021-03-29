@@ -8,7 +8,44 @@
     var produto = Model.Produto;
 }
 
-<h1>Detalhes do produtos</h1>
+
+<div id="div_FotosProduto">
+    <div class="div_ImagemProduto" style="float: left; margin: 0 10px 10px 0;">
+        <img src="/images/produtos/large_@(produto.Codigo)_1.jpg" />
+        <a asp-controller="Produto" asp-action="DetalheProduto" asp-route-Id="@produto.Id"></a>
+    </div>
+
+    <div class="div_ImagemProduto" style="float: left; margin: 0 0 10px 0;">
+        <img src="/images/produtos/large_@(produto.Codigo)_2.jpg" />
+        <a asp-controller="Produto" asp-action="DetalheProduto" asp-route-Id="@produto.Id"></a>
+    </div>
+
+    <div class="div_ImagemProduto" style="float: left; margin: 0 10px 10px 0;">
+        <img src="/images/produtos/large_@(produto.Codigo)_3.jpg" />
+        <a asp-controller="Produto" asp-action="DetalheProduto" asp-route-Id="@produto.Id"></a>
+    </div>
+
+    <div class="div_ImagemProduto" style="float: left">
+        <img src="/images/produtos/large_@(produto.Codigo)_4.jpg" />
+        <a asp-controller="Produto" asp-action="DetalheProduto" asp-route-Id="@produto.Id"></a>
+    </div>
+</div>
+
+<div id="div_DescricaoProduto">
+    <h4><label>@produto.Nome</label></h4>
+    <h5><label style="padding-bottom: 30px">@produto.Marca</label></h5>
+    <label class="label_Descricao" style="padding-bottom: 30px">@produto.Descricao</label><br />
+    <label class="label_Condicao" style="padding-bottom: 50px">Condição</label><br />
+    <label id="label_Preco">R$ @produto.Preco</label><br />
+    <label class="label_Descricao" style="padding-bottom: 30px; padding-top: 10px;">Tamanho XX</label><br />
+    <a asp-area="" asp-controller="Produto" asp-action="PesquisaProduto" id="label_TabelaDeTamanho">TABELA DE TAMANHOS</a>
+    <br /><br /><br />
+    <span class="input-group-btn">
+        <button class="buttonSecundary" type="submit">COMPRAR</button>
+    </span>
+</div>
+
+@*<h1>Detalhes do produtos</h1>
 
 <div>
     <dl class="row">
@@ -47,5 +84,5 @@
         </div>
     </dl>
 
-</div>
+</div>*@
 
