@@ -37,13 +37,6 @@ H:\Projeto HTML\UTFPR\Git\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\Ec
 H:\Projeto HTML\UTFPR\Git\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.genruntimeconfig.cache
 H:\Projeto HTML\UTFPR\Git\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.csproj.CopyComplete
 H:\Projeto HTML\UTFPR\Git\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.csprojAssemblyReference.cache
-C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.GeneratedMSBuildEditorConfig.editorconfig
-C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.AssemblyInfoInputs.cache
-C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.AssemblyInfo.cs
-C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.csproj.CoreCompileInputs.cache
-C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.MvcApplicationPartsAssemblyInfo.cache
-C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.RazorAssemblyInfo.cache
-C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.RazorAssemblyInfo.cs
 C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\bin\Debug\net5.0\appsettings.Development.json
 C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\bin\Debug\net5.0\appsettings.json
 C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\bin\Debug\net5.0\produtos.json
@@ -169,6 +162,14 @@ C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\bin\Debug\net5.0\runtimes\win-arm
 C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.csprojAssemblyReference.cache
+C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.AssemblyInfoInputs.cache
+C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.AssemblyInfo.cs
+C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.csproj.CoreCompileInputs.cache
+C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.MvcApplicationPartsAssemblyInfo.cache
+C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.RazorAssemblyInfo.cache
+C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.RazorAssemblyInfo.cs
 C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\staticwebassets\EcommerceAvessoBrecho.StaticWebAssets.Manifest.cache
 C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\staticwebassets\EcommerceAvessoBrecho.StaticWebAssets.xml
 C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\scopedcss\bundle\EcommerceAvessoBrecho.styles.css
