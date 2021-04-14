@@ -1,70 +1,118 @@
 ﻿@{ ViewData["Title"] = "Carrinho"; }
 @model CarrinhoViewModel;
 
-<h3>Meu Carrinho</h3>
 
-<form method="post" asp-action="carrinho">
-</form>
-<div id="div_HomeProdutos">
-    <div class="containerCSS">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="pull-right">
-                    <a class="btn btn-success" asp-controller="Produto" asp-action="PesquisaProduto">
-                        Adicionar Produtos
-                    </a>
+<div id="div_TabelaCarrinho" class="col-md-6">
+    <h6><label>Seu carrinho</label></h6>
+
+    <div class="panel panel-default">
+        <div id="div_CabecalhoTabela">
+
+            <div class="row">
+                <div class="col-md-5">
+                    Item
                 </div>
+                <div class="col-md-2 text-center">
+                    Valor
+                </div>
+                <div class="col-md-2 text-center">
+                    Quantidade
+                </div>
+                <div class="col-md-2 text-center">
+                    Total
+                </div>
+                <div class="col-md-1"></div>
             </div>
         </div>
-        <br />
-        <div class="panel panel-default">
-            <div class="panel-heading">
-
-                <div class="row">
-                    <div class="col-md-6">
-                        Item
-                    </div>
-                    <div class="col-md-2 text-center">
-                        Preço Unitário
-                    </div>
-                    <div class="col-md-2 text-center">
-                        Quantidade
-                    </div>
-                    <div class="col-md-2">
-                        <span class="pull-right">
-                            Subtotal
-                        </span>
-                    </div>
+        <div class="panel-body">
+            @foreach (var item in Model.Itens)
+            {
+            <div class="row div_LinhaProdutoTabela" item-id="@item.Id">
+                <div class="col-md-5">@(item.Produto.Nome)</div>
+                <div class="col-md-2 text-center">R$ @(item.PrecoUnitario)</div>
+                <div class="col-md-2 text-center">0001</div>
+                <div class="col-md-2">
+                    R$ <span class="pull-right" subtotal>
+                        @(item.Quantidade * item.PrecoUnitario)
+                    </span>
+                </div>
+                <div class="col-md-1 text-center">
+                    <a asp-area="" asp-controller="Produto" asp-action="PesquisaProduto"><img src="~/images/icons - Trash.svg" id="Trash" /></a>
                 </div>
             </div>
-            <div class="panel-body">
-                @foreach (var item in Model.Itens)
-                {
-                    <div class="row row-center linha-produto" item-id="@item.Id">
-                        <div class="col-md-3">@(item.Produto.Nome)</div>
-                        <div class="col-md-2 text-center">R$ @(item.PrecoUnitario)</div>
-                        <div class="col-md-2 text-center"></div>
-                        <div class="col-md-2">
-                            R$ <span class="pull-right" subtotal>
-                                @(item.Quantidade * item.PrecoUnitario)
-                            </span>
-                        </div>
-                    </div>
-                }
+            }
 
-            </div>
-            <div class="panel-footer">
-                <div class="row">
-                    <div class="col-md-2">
-                        Total: R$ <span class="pull-right" total>
-                            @(Model.Total)
-                        </span>
-                    </div>
+        </div>
+        <div id="div_RodapeTabela">
+            <div>
+                <div id="div_RodapeTabelaSubtotal">
+                    <label>Subtotal    </label>
+                    R$ <span class="pull-right" total>
+                        @(Model.Total)
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<div id="div_CarrinhoResumo" class="col-md-4">
+    <h6><label>Resumo</label></h6>
+
+    <div style="margin-bottom: 70px;">
+        <form asp-action="pesquisaproduto">
+            <input type="text" name=""
+                   class="inputTextFiel"
+                   style="margin: 0 31px;"
+                   placeholder="Cupom de Desconto" />
+        </form>
+    </div>
+
+    <div class="div_CarrinhoDetalhes">
+        <label>Subtotal</label>
+        <div class="div_CarrinhoDetalhesValor">
+            R$ <span class="pull-right" total>
+                @(Model.Total)
+            </span>
+        </div>
+    </div>
+
+    <div class="div_CarrinhoDetalhes">
+        <label>Desconto</label>
+        <div class="div_CarrinhoDetalhesValor">
+            R$ <span class="pull-right" total>
+                @(Model.Total)
+            </span>
+        </div>
+    </div>
+
+    <div class="div_CarrinhoDetalhes" style="border-top-style: ridge; padding-top: 20px;">
+        <label style="margin-top: 6px;">Total</label>
+        <div class="div_CarrinhoDetalhesValor" style="font-size: 20px; font-weight:600">
+            R$ <span class="pull-right" total>
+                @(Model.Total - Model.Total)
+                </span>
+        </div>
+    </div>
+
+    <div id="div_CarrinhoBotoes">
+        <span class="input-group-btn">
+            <a class="btn buttonPrimary"
+               asp-controller="Pedido"
+               asp-action="carrinho"
+               asp-route-codigo="" type="submit" style="padding-top: 9px">finalizar Compra</a>
+        </span>
+
+        <span class="input-group-btn">
+            <a class="btn buttonSecundary"
+               asp-controller="Pedido"
+               asp-action="carrinho"
+               asp-route-codigo="" type="submit" style="margin-top: 35px; padding-top: 9px">Continuar Comprando</a>
+        </span>
+    </div>
+
+</div>
+
 @section Scripts
 {
     <script src="~/js/carrinho.js">
