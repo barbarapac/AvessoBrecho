@@ -89,8 +89,13 @@ namespace EcommerceAvessoBrecho.Repositories
 
         public async Task RemoveItemPedidoAsync(int itemPedidoId)
         {
-            context.Set<ItemPedido>()
-                .Remove(await GetItemPedidoAsync(itemPedidoId));
+            await RemoveItemAsync(itemPedidoId);            
+            await context.SaveChangesAsync();
+        }
+
+        private async Task RemoveItemAsync(int itemPedido)
+        {
+            context.Set<ItemPedido>().Remove(await GetItemPedidoAsync(itemPedido));
         }
 
         public async Task<Pedido> UpdateClienteAsync(Cliente cliente)

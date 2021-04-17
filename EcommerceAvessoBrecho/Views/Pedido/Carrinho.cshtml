@@ -27,19 +27,21 @@
         <div class="panel-body">
             @foreach (var item in Model.Itens)
             {
-            <div class="row div_LinhaProdutoTabela" item-id="@item.Id">
-                <div class="col-md-5">@(item.Produto.Nome)</div>
-                <div class="col-md-2 text-center">R$ @(item.PrecoUnitario)</div>
-                <div class="col-md-2 text-center">0001</div>
-                <div class="col-md-2">
-                    R$ <span class="pull-right" subtotal>
-                        @(item.Quantidade * item.PrecoUnitario)
-                    </span>
+                <div class="row div_LinhaProdutoTabela" item-id="@item.Id">
+                    <div class="col-md-5">@(item.Produto.Nome)</div>
+                    <div class="col-md-2 text-center">R$ @(item.PrecoUnitario)</div>
+                    <div class="col-md-2 text-center">0001</div>
+                    <div class="col-md-2">
+                        R$ <span class="pull-right" subtotal>
+                            @(item.Quantidade * item.PrecoUnitario)
+                        </span>
+                    </div>
+                    <div class="col-md-1 text-center">
+                        <button class="btn btn-default" onclick="carrinho.clickRemoveItemCarrinho(this)">
+                            <img src="~/images/icons - Trash.svg" id="Trash" />
+                        </button>
+                    </div>
                 </div>
-                <div class="col-md-1 text-center">
-                    <a asp-area="" asp-controller="Produto" asp-action="PesquisaProduto"><img src="~/images/icons - Trash.svg" id="Trash" /></a>
-                </div>
-            </div>
             }
 
         </div>
@@ -91,7 +93,7 @@
         <div class="div_CarrinhoDetalhesValor" style="font-size: 20px; font-weight:600">
             R$ <span class="pull-right" total>
                 @(Model.Total - Model.Total)
-                </span>
+            </span>
         </div>
     </div>
 
@@ -104,10 +106,9 @@
         </span>
 
         <span class="input-group-btn">
-            <a class="btn buttonSecundary"
-               asp-controller="Pedido"
-               asp-action="carrinho"
-               asp-route-codigo="" type="submit" style="margin-top: 35px; padding-top: 9px">Continuar Comprando</a>
+            <a class="btn buttonSecundary" asp-controller="Produto" asp-action="PesquisaProduto" type="submit" style="margin-top: 35px; padding-top: 9px">
+                Continuar Comprando
+            </a>
         </span>
     </div>
 
@@ -115,7 +116,5 @@
 
 @section Scripts
 {
-    <script src="~/js/carrinho.js">
-
-    </script>
+    <script src="~/js/carrinho.js"></script>
 }

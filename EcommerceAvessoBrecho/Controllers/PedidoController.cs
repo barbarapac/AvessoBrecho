@@ -2,6 +2,7 @@
 using EcommerceAvessoBrecho.Repositories.IRepository;
 using EcommerceAvessoBrecho.ViewsModels;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -44,7 +45,7 @@ namespace EcommerceAvessoBrecho.Controllers
             return base.View(carrinhoViewModel);
         }
 
-        public async Task<IActionResult> Cliente(string cupom)
+        public async Task<IActionResult> AplicaDesconto(string cupom)
         {
             var pedido = await _pedidoRepository.GetPedidoAsync();
 
@@ -59,8 +60,29 @@ namespace EcommerceAvessoBrecho.Controllers
             var totPedido = pedido.ItensPedido.Sum(i => i.Quantidade * i.PrecoUnitario);
             pedido.VlTotalPedido = totPedido - (totPedido * (decimal)0.010);
 
+            return base.View();
+        }
+
+        public async Task<IActionResult> Cliente(string cupom)
+        {
+            var pedido = await _pedidoRepository.GetPedidoAsync();
+
             return View(pedido.Cliente);
         }
-        
+
+        [HttpPost]
+        public async Task<IActionResult> RemoveQuantidade([FromBody] string itemPedidoId)
+        {
+            try
+            {
+                await _pedidoRepository.RemoveItemPedidoAsync(int.Parse(itemPedidoId));
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return UnprocessableEntity();
+            }
+        }
+
     }
 }
