@@ -43,30 +43,12 @@ namespace EcommerceAvessoBrecho.Controllers
         public async Task<IActionResult> Carrinho()
         {
             var pedido = await _pedidoRepository.GetPedidoAsync();
-            pedido.VlTotalPedido = pedido.ItensPedido.Sum(i => i.Quantidade * i.PrecoUnitario);
+            await _pedidoRepository.AplicaCupomDescontoAsync();
 
             List<ItemPedido> itens = pedido.ItensPedido;
-            CarrinhoViewModel carrinhoViewModel = new CarrinhoViewModel(itens);
+            CarrinhoViewModel carrinhoViewModel = new CarrinhoViewModel(itens, itens.Count > 0 ? pedido.VlDesconto : 0);
 
             return base.View(carrinhoViewModel);
-        }
-
-        public async Task<IActionResult> AplicaDesconto(string cupom)
-        {
-            var pedido = await _pedidoRepository.GetPedidoAsync();
-
-            if (pedido == null)
-            {
-                return RedirectToAction("BuscaProdutos");
-            }
-
-            if (!Equals(cupom, "AVESSO10"))
-                base.Unauthorized("Cupom inválido");
-
-            var totPedido = pedido.ItensPedido.Sum(i => i.Quantidade * i.PrecoUnitario);
-            pedido.VlTotalPedido = totPedido - (totPedido * (decimal)0.010);
-
-            return base.View();
         }
 
         public async Task<IActionResult> Cliente(string cupom)
@@ -80,6 +62,13 @@ namespace EcommerceAvessoBrecho.Controllers
         public async Task<IActionResult> UpdateQuantidade([FromBody] string itemPedidoId)
         {
             await _pedidoRepository.UpdateQuantidadeAsync(int.Parse(itemPedidoId));
+            return RedirectToAction("carrinho");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AplicaCupomDesconto([FromBody] string cupom)
+        {
+            await _pedidoRepository.AplicaCupomDescontoAsync(true);
             return RedirectToAction("carrinho");
         }
     }

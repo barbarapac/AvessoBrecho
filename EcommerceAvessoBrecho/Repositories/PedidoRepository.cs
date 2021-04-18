@@ -56,6 +56,15 @@ namespace EcommerceAvessoBrecho.Repositories
 
                 await context.SaveChangesAsync();
             }
+
+            if (pedido != null)
+            {
+                pedido.VlTotalPedido += itemPedido.PrecoUnitario;
+                context.Set<Pedido>().Update(pedido);
+                await context.SaveChangesAsync();
+            }
+
+            if (pedido.VlDesconto > 0) await AplicaCupomDescontoAsync(true);
         }
 
         public async Task<ItemPedido> GetItemPedidoAsync(int itemPedidoId)
@@ -93,17 +102,22 @@ namespace EcommerceAvessoBrecho.Repositories
             var itemPedidoDB = await GetItemPedidoAsync(id);
 
             if (itemPedidoDB != null)
-            { 
+            {
                 await RemoveItemPedidoAsync(itemPedidoDB.Id);
-
                 await context.SaveChangesAsync();
 
                 var pedido = await GetPedidoAsync();
-                var carrinhoViewModel = new CarrinhoViewModel(pedido.ItensPedido);
+
+                if (pedido.VlDesconto > 0) 
+                    await AplicaCupomDescontoAsync(true);
+                
+                var carrinhoViewModel = new CarrinhoViewModel(pedido.ItensPedido, pedido.ItensPedido.Count > 0 
+                                                                                  ? pedido.VlDesconto 
+                                                                                  : 0);
 
                 return new UpdateQuantidadeResponse(itemPedidoDB, carrinhoViewModel);
             }
-            
+
             throw new ArgumentException("ItemPedido não encontrado");
         }
 
@@ -121,6 +135,22 @@ namespace EcommerceAvessoBrecho.Repositories
             context.Set<ItemPedido>()
                 .Remove(await GetItemPedidoAsync(itemPedidoId));
         }
+
+        //private async Task<Pedido> GetPedido() => await dbSet.Where(p => p.Id == httpHelper.GetPedidoId()).SingleOrDefaultAsync();
+
+        public async Task AplicaCupomDescontoAsync(bool aplicaCupom = false)
+        {
+            var pedido = await GetPedidoAsync();
+
+            if (pedido.VlTotalPedido > 0)
+            {
+                var totPedido = pedido.ItensPedido.Sum(i => i.Quantidade * i.PrecoUnitario);
+                if (aplicaCupom) pedido.VlDesconto = (totPedido * (decimal)0.10);
+                pedido.VlTotalPedido = totPedido - pedido.VlDesconto;
+                context.Set<Pedido>().Update(pedido);
+                await context.SaveChangesAsync();
+            }
+        }
     }
-    
+
 }

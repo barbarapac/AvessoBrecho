@@ -16,7 +16,6 @@
         });
     }
 
-
     getData(elemento) {
         var linhaDoItem = $(elemento).parents('[item-id]');
         var itemPedidoId = $(linhaDoItem).attr('item-id');
@@ -36,6 +35,30 @@
             window.location.href = "../pedido/carrinho";
         });
     }       
+
+    clickAddCupomDesconto(desconto) {
+        let cupom = document.getElementById("inputCupom").value;
+
+        if (desconto == 0) {
+            if (cupom == 'AVESSO10') {
+                $.ajax({
+                    url: '/pedido/aplicacupomdesconto',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(cupom),
+                    success: function () {
+                        window.location.href = "../pedido/carrinho";
+                    }
+                }).done(function (response) {
+                    window.location.href = "../pedido/carrinho";
+                });
+            } else {
+                alert("Cupom Inválido");
+            }
+        } else {
+            alert("Você já possui um cupom aplicado.");
+        }
+    }
 }
 
 var carrinho = new Carrinho();

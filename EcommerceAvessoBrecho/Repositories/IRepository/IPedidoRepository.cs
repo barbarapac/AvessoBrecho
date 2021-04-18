@@ -1,5 +1,4 @@
 ﻿using EcommerceAvessoBrecho.Models;
-using EcommerceAvessoBrecho.ViewsModels;
 using System.Threading.Tasks;
 
 namespace EcommerceAvessoBrecho.Repositories.IRepository
@@ -11,5 +10,6 @@ namespace EcommerceAvessoBrecho.Repositories.IRepository
         Task<Pedido> UpdateClienteAsync(Cliente cliente);
         Task<ItemPedido> GetItemPedidoAsync(int itemPedidoId);
         Task<UpdateQuantidadeResponse> UpdateQuantidadeAsync(int itemPedidoId);
+        Task AplicaCupomDescontoAsync(bool aplicaCupom = false);
     }
 }

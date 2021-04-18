@@ -65,11 +65,15 @@
     <h6><label>Resumo</label></h6>
 
     <div style="margin-bottom: 70px;">
-        <form asp-action="pesquisaproduto">
-            <input type="text" name=""
+        <form >
+            <input id="inputCupom"
+                   type="text" name=""
                    class="inputTextFiel"
                    style="margin: 0 31px;"
                    placeholder="Cupom de Desconto" />
+            <button class="btn buttonPrimary" type="submit" style="width: 140px; padding-top: 9px" onclick="carrinho.clickAddCupomDesconto(@(Model.VlDesconto))">
+                OK
+            </button>
         </form>
     </div>
 
@@ -86,8 +90,8 @@
         <label>Desconto</label>
         <div class="div_CarrinhoDetalhesValor">
             R$ <span class="pull-right" total>
-                0
-            </span>
+                    @(Model.VlDesconto)
+               </span>
         </div>
     </div>
 
@@ -95,7 +99,7 @@
         <label style="margin-top: 6px;">Total</label>
         <div class="div_CarrinhoDetalhesValor" style="font-size: 20px; font-weight:600">
             R$ <span class="pull-right" total>
-                @(Model.Total)
+                @(Model.Total - Model.VlDesconto)
             </span>
         </div>
     </div>

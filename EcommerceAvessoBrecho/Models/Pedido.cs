@@ -20,6 +20,9 @@ namespace EcommerceAvessoBrecho.Models
         [Column(TypeName = "decimal(8,2)")]
         public decimal VlTotalPedido { get; set; }
 
+        [Column(TypeName = "decimal(8,2)")]
+        public decimal VlDesconto { get; set; }
+
         public DateTime DataCadastro { get; set; }
         public List<ItemPedido> ItensPedido { get; private set; } = new List<ItemPedido>();
 
