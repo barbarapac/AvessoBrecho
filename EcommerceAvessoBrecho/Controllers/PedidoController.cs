@@ -29,19 +29,25 @@ namespace EcommerceAvessoBrecho.Controllers
             return RedirectToAction("Cliente");
         }
 
-        public async Task<IActionResult> Carrinho(string codigo)
+        [HttpPost]
+        public async Task<IActionResult> AdditemCarrinho([FromBody]string codigo)
         {
             if (!string.IsNullOrEmpty(codigo))
             {
                 await _pedidoRepository.AddItemAsync(codigo);
             }
 
+            return Ok();
+        }
+
+        public async Task<IActionResult> Carrinho()
+        {
             var pedido = await _pedidoRepository.GetPedidoAsync();
             pedido.VlTotalPedido = pedido.ItensPedido.Sum(i => i.Quantidade * i.PrecoUnitario);
 
             List<ItemPedido> itens = pedido.ItensPedido;
             CarrinhoViewModel carrinhoViewModel = new CarrinhoViewModel(itens);
-                     
+
             return base.View(carrinhoViewModel);
         }
 
@@ -71,18 +77,10 @@ namespace EcommerceAvessoBrecho.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> RemoveQuantidade([FromBody] string itemPedidoId)
+        public async Task<IActionResult> UpdateQuantidade([FromBody] string itemPedidoId)
         {
-            try
-            {
-                await _pedidoRepository.RemoveItemPedidoAsync(int.Parse(itemPedidoId));
-                return Ok();
-            }
-            catch (Exception)
-            {
-                return UnprocessableEntity();
-            }
+            await _pedidoRepository.UpdateQuantidadeAsync(int.Parse(itemPedidoId));
+            return RedirectToAction("carrinho");
         }
-
     }
 }

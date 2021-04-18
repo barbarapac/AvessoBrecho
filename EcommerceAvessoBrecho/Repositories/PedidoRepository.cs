@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using EcommerceAvessoBrecho.DataBase.Context;
 using EcommerceAvessoBrecho.Models;
 using EcommerceAvessoBrecho.Repositories.IRepository;
+using EcommerceAvessoBrecho.ViewsModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -30,7 +31,7 @@ namespace EcommerceAvessoBrecho.Repositories
         {
             var produto = await
                            context.Set<Produto>()
-                           .Where(p => p.Codigo == codigo)
+                           .Where(p => p.Codigo.Equals(codigo.PadLeft(3, '0')))
                            .SingleOrDefaultAsync();
 
             if (produto == null)
@@ -42,7 +43,7 @@ namespace EcommerceAvessoBrecho.Repositories
 
             var itemPedido = await
                                 context.Set<ItemPedido>()
-                                .Where(i => i.Produto.Codigo == codigo
+                                .Where(i => i.Produto.Codigo == codigo.PadLeft(3, '0')
                                         && i.Pedido.Id == pedido.Id)
                                 .SingleOrDefaultAsync();
 
@@ -87,15 +88,23 @@ namespace EcommerceAvessoBrecho.Repositories
             return pedido;
         }
 
-        public async Task RemoveItemPedidoAsync(int itemPedidoId)
+        public async Task<UpdateQuantidadeResponse> UpdateQuantidadeAsync(int id)
         {
-            await RemoveItemAsync(itemPedidoId);            
-            await context.SaveChangesAsync();
-        }
+            var itemPedidoDB = await GetItemPedidoAsync(id);
 
-        private async Task RemoveItemAsync(int itemPedido)
-        {
-            context.Set<ItemPedido>().Remove(await GetItemPedidoAsync(itemPedido));
+            if (itemPedidoDB != null)
+            { 
+                await RemoveItemPedidoAsync(itemPedidoDB.Id);
+
+                await context.SaveChangesAsync();
+
+                var pedido = await GetPedidoAsync();
+                var carrinhoViewModel = new CarrinhoViewModel(pedido.ItensPedido);
+
+                return new UpdateQuantidadeResponse(itemPedidoDB, carrinhoViewModel);
+            }
+            
+            throw new ArgumentException("ItemPedido não encontrado");
         }
 
         public async Task<Pedido> UpdateClienteAsync(Cliente cliente)
@@ -106,5 +115,12 @@ namespace EcommerceAvessoBrecho.Repositories
             httpHelper.SetCliente(pedido.Cliente);
             return pedido;
         }
+
+        private async Task RemoveItemPedidoAsync(int itemPedidoId)
+        {
+            context.Set<ItemPedido>()
+                .Remove(await GetItemPedidoAsync(itemPedidoId));
+        }
     }
+    
 }

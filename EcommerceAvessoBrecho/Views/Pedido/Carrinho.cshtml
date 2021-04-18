@@ -1,6 +1,9 @@
 ﻿@{ ViewData["Title"] = "Carrinho"; }
-@model CarrinhoViewModel;
 
+@model CarrinhoViewModel
+
+<form method="post" asp-action="carrinho">
+</form>
 
 <div id="div_TabelaCarrinho" class="col-md-6">
     <h6><label>Seu carrinho</label></h6>
@@ -24,7 +27,7 @@
                 <div class="col-md-1"></div>
             </div>
         </div>
-        <div class="panel-body">
+        <div class="panel-body" id="listaItens">
             @foreach (var item in Model.Itens)
             {
                 <div class="row div_LinhaProdutoTabela" item-id="@item.Id">
@@ -83,7 +86,7 @@
         <label>Desconto</label>
         <div class="div_CarrinhoDetalhesValor">
             R$ <span class="pull-right" total>
-                @(Model.Total)
+                0
             </span>
         </div>
     </div>
@@ -92,7 +95,7 @@
         <label style="margin-top: 6px;">Total</label>
         <div class="div_CarrinhoDetalhesValor" style="font-size: 20px; font-weight:600">
             R$ <span class="pull-right" total>
-                @(Model.Total - Model.Total)
+                @(Model.Total)
             </span>
         </div>
     </div>
@@ -101,8 +104,8 @@
         <span class="input-group-btn">
             <a class="btn buttonPrimary"
                asp-controller="Pedido"
-               asp-action="carrinho"
-               asp-route-codigo="" type="submit" style="padding-top: 9px">finalizar Compra</a>
+               asp-action="cliente"
+               asp-route-codigo="" type="submit" style="padding-top: 9px">Finalizar Compra</a>
         </span>
 
         <span class="input-group-btn">

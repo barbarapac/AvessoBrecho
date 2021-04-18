@@ -5,6 +5,18 @@
         this.postQuantidade(data);
     }
 
+    clickAddProdPedido(codItem) {
+        $.ajax({
+            url: '/pedido/additemcarrinho',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(codItem.toString())
+        }).done(function (response) {
+            window.location.href = "../pedido/carrinho";
+        });
+    }
+
+
     getData(elemento) {
         var linhaDoItem = $(elemento).parents('[item-id]');
         var itemPedidoId = $(linhaDoItem).attr('item-id');
@@ -14,17 +26,16 @@
         };
     }
 
-
     postQuantidade(data) {
         $.ajax({
-            url: '/pedido/removequantidade',
+            url: '/pedido/updatequantidade',
             type: 'POST',
             contentType: 'application/json',
             data: JSON.stringify(data.itemPedidoId)
         }).done(function (response) {
-            location.reload();
+            window.location.href = "../pedido/carrinho";
         });
-    }
+    }       
 }
 
 var carrinho = new Carrinho();

@@ -8,6 +8,8 @@
     var produto = Model.Produto;
 }
 
+<form method="post" asp-action="carrinho">
+</form>
 
 <div id="div_FotosProduto">
     <div class="div_ImagemProduto" style="float: left; margin: 0 10px 10px 0;">
@@ -41,52 +43,13 @@
     <a asp-area="" asp-controller="Produto" asp-action="PesquisaProduto" id="label_TabelaDeTamanho">TABELA DE TAMANHOS</a>
     <br /><br /><br />
     <span class="input-group-btn">
-        <a class="btn buttonPrimary" 
-               asp-controller="Pedido"
-               asp-action="carrinho"
-               asp-route-codigo="@produto.Codigo" type="submit" style="width: 140px; padding-top: 9px">COMPRAR</a>
+        <button class="btn buttonPrimary" type="submit" style="width: 140px; padding-top: 9px" onclick="carrinho.clickAddProdPedido(@produto.Codigo)">
+            COMPRAR
+        </button>
     </span>
 </div>
 
-@*<h1>Detalhes do produtos</h1>
-
-
-<div>
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Produto.Nome)
-        </dt>
-        <div class="text-center">
-            <a asp-controller="Pedido"
-               asp-action="carrinho"
-               asp-route-codigo="@produto.Codigo"
-               class="btn btn-success">Comprar</a>
-        </div>
-        <div class="div_Produtos">
-            <div class="div_ImagemProduto">
-                <img src="/images/produtos/large_@(produto.Codigo)_1.jpg" />
-                <a asp-controller="Produto" asp-action="DetalheProduto" asp-route-Id="@produto.Id"></a>
-            </div>
-        </div>
-        <div class="div_Produtos">
-            <div class="div_ImagemProduto">
-                <img src="/images/produtos/large_@(produto.Codigo)_2.jpg" />
-                <a asp-controller="Produto" asp-action="DetalheProduto" asp-route-Id="@produto.Id"></a>
-            </div>
-        </div>
-        <div class="div_Produtos">
-            <div class="div_ImagemProduto">
-                <img src="/images/produtos/large_@(produto.Codigo)_3.jpg" />
-                <a asp-controller="Produto" asp-action="DetalheProduto" asp-route-Id="@produto.Id"></a>
-            </div>
-        </div>
-        <div class="div_Produtos">
-            <div class="div_ImagemProduto">
-                <img src="/images/produtos/large_@(produto.Codigo)_4.jpg" />
-                <a asp-controller="Produto" asp-action="DetalheProduto" asp-route-Id="@produto.Id"></a>
-            </div>
-        </div>
-    </dl>
-
-</div>*@
-
+@section Scripts
+{
+    <script src="~/js/carrinho.js"></script>
+}
