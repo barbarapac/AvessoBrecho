@@ -191,5 +191,4 @@ C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoB
 C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\ref\EcommerceAvessoBrecho.dll
 C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.pdb
 C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.genruntimeconfig.cache
-C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.csprojAssemblyReference.cache
 C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\Razor\Views\Pedido\Cliente.cshtml.g.cs

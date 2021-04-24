@@ -31,16 +31,16 @@
             @foreach (var item in Model.Itens)
             {
                 <div class="row div_LinhaProdutoTabela" item-id="@item.Id">
-                    <div class="col-md-5">@(item.Produto.Nome)</div>
-                    <div class="col-md-2 text-center">R$ @(item.PrecoUnitario)</div>
-                    <div class="col-md-2 text-center">0001</div>
-                    <div class="col-md-2">
+                    <div class="col-md-5" style="padding-top: 5px">@(item.Produto.Nome)</div>
+                    <div class="col-md-2 text-center" style="padding-top: 5px">R$ @(item.PrecoUnitario)</div>
+                    <div class="col-md-2 text-center" style="padding-top: 5px">0001</div>
+                    <div class="col-md-2 text-center" style="padding-top: 5px">
                         R$ <span class="pull-right" subtotal>
                             @(item.Quantidade * item.PrecoUnitario)
                         </span>
                     </div>
                     <div class="col-md-1 text-center">
-                        <button class="btn btn-default" onclick="carrinho.clickRemoveItemCarrinho(this)">
+                        <button class="btn btn-default" style="padding: 0" onclick="carrinho.clickRemoveItemCarrinho(this)">
                             <img src="~/images/icons - Trash.svg" id="Trash" />
                         </button>
                     </div>
