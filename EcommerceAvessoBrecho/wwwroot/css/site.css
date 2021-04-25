@@ -245,6 +245,10 @@ h6 {
     margin: 140px 30px 0 30px;
 }
 
+#div_ClienteBotoes {
+    float:right;
+    margin: 40px 0 40px 0;
+}
 
 /*------------------------------- Classes -------------------------------*/
 .containerCSS {
@@ -343,6 +347,19 @@ h6 {
     color: #B7B7B7;
 }
 
+.buttonOK {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    opacity: 1;
+    background-color: #1F9399;
+    border: 0;
+}
+
+.buttonOK:hover {
+    background-color: #355154;
+}
+
 .inputTextFiel {
     width: 364px;
     height: 40px;
@@ -355,7 +372,7 @@ h6 {
     text-align: left;
     font: normal normal normal 14px/21px Roboto;
     letter-spacing: 0px;
-    color: #000000BC;
+    color: #474747;
     opacity: 1;
     padding-left: 16px;
 }
@@ -464,4 +481,34 @@ h6 {
 
 .div_CarrinhoDetalhesValor {
     float: right;
+}
+
+.div_ClienteCampos {
+    width: 100%;
+    margin-left: 80px;
+    margin-right: 80px;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 16px;
+}
+
+    .div_ClienteCampos label {
+        font-family: Montserrat;
+        text-align: left;
+        font-size: 14px;
+        color: #17181D;
+        letter-spacing: 0px;
+        margin-bottom: 2px;
+        margin-left: 5px;
+    }
+
+.div_ClienteTitulo {
+    margin: 32px 0 40px 40px;
+}
+
+
+::-webkit-input-placeholder {
+    font-family: Montserrat;
+    text-align: left;
+    font-size: 14px;
+    color: #BDBDBD;
 }

@@ -69,10 +69,10 @@
             <input id="inputCupom"
                    type="text" name=""
                    class="inputTextFiel"
-                   style="margin: 0 31px;"
+                   style="margin: 0 16px 0 31px; width: 310px;"
                    placeholder="Cupom de Desconto" />
-            <button class="btn buttonPrimary" type="submit" style="width: 140px; padding-top: 9px" onclick="carrinho.clickAddCupomDesconto(@(Model.VlDesconto))">
-                OK
+            <button class="buttonOK" type="submit" onclick="carrinho.clickAddCupomDesconto(@(Model.VlDesconto))">
+                <img src="~/images/Icon - check.svg" style="filter:invert(100%)" />
             </button>
         </form>
     </div>
