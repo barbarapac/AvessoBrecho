@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.Serialization;
 
 namespace EcommerceAvessoBrecho.Models
@@ -70,5 +69,20 @@ namespace EcommerceAvessoBrecho.Models
                 CPF = this.CPF                
             };
         }
+
+        internal void Update(Cliente cliente)
+        {
+            this.Bairro = cliente.Bairro;
+            this.CEP = cliente.CEP;
+            this.Complemento = cliente.Complemento;
+            this.Email = cliente.Email;
+            this.Endereco = cliente.Endereco;
+            this.Municipio = cliente.Municipio;
+            this.Nome = cliente.Nome;
+            this.Telefone = cliente.Telefone;
+            this.UF = cliente.UF;
+            this.CPF = cliente.CPF;
+        }
+
     }
 }

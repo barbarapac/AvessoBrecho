@@ -2,9 +2,7 @@
 using EcommerceAvessoBrecho.Repositories.IRepository;
 using EcommerceAvessoBrecho.ViewsModels;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace EcommerceAvessoBrecho.Controllers
@@ -22,11 +20,16 @@ namespace EcommerceAvessoBrecho.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Resumo(Cliente cliente)
         {
-            if (ModelState.IsValid)
-            {
-                return View(await _pedidoRepository.UpdateClienteAsync(cliente));
-            }
-            return RedirectToAction("Cliente");
+            //if (ModelState.IsValid)
+            //{
+                await _pedidoRepository.UpdateClienteAsync(cliente);
+
+                var pedido = await _pedidoRepository.GetPedidoAsync();
+                ResumoViewModel resumoViewModel = new ResumoViewModel(pedido);
+
+                return base.View(resumoViewModel);
+            //}
+            //return RedirectToAction("Cliente");
         }
 
         [HttpPost]
