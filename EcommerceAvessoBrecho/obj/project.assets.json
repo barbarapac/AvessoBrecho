@@ -5131,7 +5131,8 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\babya\\.nuget\\packages\\": {}
+    "C:\\Users\\Renan\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
@@ -5139,11 +5140,14 @@
       "projectUniqueName": "C:\\Projetos\\AvessoBrecho\\EcommerceAvessoBrecho\\EcommerceAvessoBrecho.csproj",
       "projectName": "EcommerceAvessoBrecho",
       "projectPath": "C:\\Projetos\\AvessoBrecho\\EcommerceAvessoBrecho\\EcommerceAvessoBrecho.csproj",
-      "packagesPath": "C:\\Users\\babya\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Renan\\.nuget\\packages\\",
       "outputPath": "C:\\Projetos\\AvessoBrecho\\EcommerceAvessoBrecho\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\babya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Renan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5210,7 +5214,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

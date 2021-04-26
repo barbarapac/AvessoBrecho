@@ -1,53 +1,167 @@
 ﻿@{ ViewData["Title"] = "Resumo"; }
 
 @model ResumoViewModel;
-<h3>Resumo do Pedido</h3>
 
-<br />
-<div class="panel panel-default">
-    <div class="panel-body">
-        <div class="row">
-            <div class="col-md-12">
-                <h3>Nº do Pedido: @(Model.pedido.Id)</h3>
+<div style="margin: 64px 0 64px 80px">
+    <h4>@(Model.pedido.Cliente.Nome), esse é seu resumo.</h4>
+</div>
+
+<div style="height: 900px">
+
+    <div class="div_ClienteCampos" style="height: 180px">
+        <div class="div_ClienteTitulo">
+            <h4>1. Dados Pessoais</h4>
+        </div>
+
+        <div style="padding: 0 50px 0 50px;">
+            <div class="form-group col-4" style="float:left">
+                <label class="control-label" for="nomeCliente">Nome do Cliente</label>
+                <br /><label style="font-weight:600; color:#474747">@(Model.pedido.Cliente.Nome)</label>
+            </div>
+            <div class="col-4" style="float:left">
+                <label class="control-label" for="email">Email</label>
+                <br /><label style="font-weight:600; color:#474747">@(Model.pedido.Cliente.Email)</label>
+            </div>
+            <div class="col-4" style="float:left">
+                <label class="control-label" for="telefone">Telefone</label>
+                <br /><label style="font-weight:600; color:#474747">@(Model.pedido.Cliente.Telefone)</label>
             </div>
         </div>
-        <hr />
-        <div class="row">
-            <div class="col-md-3">
-                <h3>Seus Dados</h3>
-                <div>@Model.pedido.Cliente.Nome</div>
-                <div>@Model.pedido.Cliente.Telefone</div>
+    </div>
+
+    <div class="div_ClienteCampos" style="height: 180px">
+        <div class="div_ClienteTitulo" style="margin-top: 64px">
+            <h4>2. Endereço</h4>
+        </div>
+
+        <div style="padding: 0 50px 0 50px;">
+            <div class="col-3" style="float:left">
+                <label class="control-label" for="endereco">Endereço</label>
+                <br /><label style="font-weight:600; color:#474747">@(Model.pedido.Cliente.Endereco) - @(Model.pedido.Cliente.Bairro)</label>
             </div>
-            <div class="col-md-3">
-                @Model.pedido.Cliente.Email
+            <div class="col-3" style="float:left">
+                <label class="control-label" for="complemento">Cidade</label>
+                <br /><label style="font-weight:600; color:#474747">@(Model.pedido.Cliente.Municipio)</label>
             </div>
-            <div class="col-md-6">
-                <h3>Endereço de Entrega</h3>
-                <div>@Model.pedido.Cliente.Endereco @Model.pedido.Cliente.Complemento - @Model.pedido.Cliente.Bairro - CEP: @Model.pedido.Cliente.CEP - @Model.pedido.Cliente.Municipio - @Model.pedido.Cliente.UF - Brasil</div>
+            <div class="col-3" style="float:left">
+                <label class="control-label" for="bairro">CEP</label>
+                <br /><label style="font-weight:600; color:#474747">@(Model.pedido.Cliente.CEP)</label>
+            </div>
+            <div class="col-3" style="float:left">
+                <label class="control-label" for="municipio">Complemento</label>
+                <br /><label style="font-weight:600; color:#474747">@(Model.pedido.Cliente.Complemento)</label>
             </div>
         </div>
-        <hr />
-        <div class="row">
-            <div class="col-md-10">
-                <h3>Item</h3>
+    </div>
+
+    <div class="div_ClienteCampos">
+        <div class="div_ClienteTitulo" style="margin-top: 64px">
+            <h4>3. Pedido</h4>
+        </div>
+
+        <div class="row" id="div_ResumoCabecalhoTabela">
+            <div class="col-md-5">
+                Identificador
             </div>
             <div class="col-md-2">
-                <h3>Quantidade</h3>
+                Valor
             </div>
+            <div class="col-md-2">
+                Quantidade
+            </div>
+            <div class="col-md-2">
+                Total
+            </div>
+            <div class="col-md-1"></div>
         </div>
 
-        @foreach (var item in Model.pedido.ItensPedido)
+        <div class="panel-body" id="listaItens">
+            @*@foreach (var item in Model.pedido.ItensPedido)
         {
-
-
-            <div class="row">
-                <div class="col-md-10">
-                    <div>@item.Produto.Nome</div>
+            <div class="row div_LinhaProdutoTabela" item-id="@item.Id">
+                <div class="col-md-5" style="padding-top: 5px">@(item.Produto.Nome)</div>
+                <div class="col-md-2 text-center" style="padding-top: 5px">R$ @(item.PrecoUnitario)</div>
+                <div class="col-md-2 text-center" style="padding-top: 5px">0001</div>
+                <div class="col-md-2 text-center" style="padding-top: 5px">
+                    R$ <span class="pull-right" subtotal>
+                        @(item.Quantidade * item.PrecoUnitario)
+                    </span>
                 </div>
-                <div class="col-md-2">
-                    <div class="pull-right">@item.Quantidade</div>
+            </div>
+        }*@
+
+            <div class="row div_LinhaProdutoTabela" item-id="1">
+                <div class="col-md-5" style="padding-top: 5px">Teste</div>
+                <div class="col-md-2" style="padding-top: 5px">R$ 20,00</div>
+                <div class="col-md-2" style="padding-top: 5px">0001</div>
+                <div class="col-md-2" style="padding-top: 5px">
+                    R$ 20,00
                 </div>
-            </div>}
+            </div>
+
+            <div class="row div_LinhaProdutoTabela" item-id="2">
+                <div class="col-md-5" style="padding-top: 5px">Teste</div>
+                <div class="col-md-2" style="padding-top: 5px">R$ 20,00</div>
+                <div class="col-md-2" style="padding-top: 5px">0001</div>
+                <div class="col-md-2" style="padding-top: 5px">
+                    R$ 20,00
+                </div>
+            </div>
+
+        </div>
 
     </div>
+
 </div>
+
+
+    <h3>Resumo do Pedido</h3>
+
+    <br />
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Nº do Pedido: @(Model.pedido.Id)</h3>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-md-3">
+                    <h3>Seus Dados</h3>
+                    <div>@Model.pedido.Cliente.Nome</div>
+                    <div>@Model.pedido.Cliente.Telefone</div>
+                </div>
+                <div class="col-md-3">
+                    @Model.pedido.Cliente.Email
+                </div>
+                <div class="col-md-6">
+                    <h3>Endereço de Entrega</h3>
+                    <div>@Model.pedido.Cliente.Endereco @Model.pedido.Cliente.Complemento - @Model.pedido.Cliente.Bairro - CEP: @Model.pedido.Cliente.CEP - @Model.pedido.Cliente.Municipio - @Model.pedido.Cliente.UF - Brasil</div>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-md-10">
+                    <h3>Item</h3>
+                </div>
+                <div class="col-md-2">
+                    <h3>Quantidade</h3>
+                </div>
+            </div>
+
+            @foreach (var item in Model.pedido.ItensPedido)
+            {
+
+
+                <div class="row">
+                    <div class="col-md-10">
+                        <div>@item.Produto.Nome</div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="pull-right">@item.Quantidade</div>
+                    </div>
+                </div>}
+
+        </div>
+    </div>
