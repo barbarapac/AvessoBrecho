@@ -136,8 +136,6 @@ namespace EcommerceAvessoBrecho.Repositories
                 .Remove(await GetItemPedidoAsync(itemPedidoId));
         }
 
-        //private async Task<Pedido> GetPedido() => await dbSet.Where(p => p.Id == httpHelper.GetPedidoId()).SingleOrDefaultAsync();
-
         public async Task AplicaCupomDescontoAsync(bool aplicaCupom = false)
         {
             var pedido = await GetPedidoAsync();
