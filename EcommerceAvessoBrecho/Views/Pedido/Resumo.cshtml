@@ -6,7 +6,7 @@
     <h4>@(Model.pedido.Cliente.Nome), esse é seu resumo.</h4>
 </div>
 
-<div style="height: 900px">
+<div style="height: 1500px">
 
     <div class="div_ClienteCampos" style="height: 180px">
         <div class="div_ClienteTitulo">
@@ -54,7 +54,7 @@
         </div>
     </div>
 
-    <div class="div_ClienteCampos">
+    <div class="div_ClienteCampos" style="margin-bottom: 64px">
         <div class="div_ClienteTitulo" style="margin-top: 64px">
             <h4>3. Pedido</h4>
         </div>
@@ -78,90 +78,84 @@
         <div class="panel-body" id="listaItens">
             @foreach (var item in Model.pedido.ItensPedido)
             {
-                <div class="row div_LinhaProdutoTabela" item-id="@item.Id">
+                <div class="row div_ResumoLinhaProdutoTabela" item-id="@item.Id">
                     <div class="col-md-5" style="padding-top: 5px">@(item.Produto.Nome)</div>
-                    <div class="col-md-2 text-center" style="padding-top: 5px">R$ @(item.PrecoUnitario)</div>
-                    <div class="col-md-2 text-center" style="padding-top: 5px">0001</div>
-                    <div class="col-md-2 text-center" style="padding-top: 5px">
+                    <div class="col-md-2" style="padding-top: 5px">R$ @(item.PrecoUnitario)</div>
+                    <div class="col-md-2" style="padding-top: 5px">0001</div>
+                    <div class="col-md-2" style="padding-top: 5px">
                         R$ <span class="pull-right" subtotal>
                             @(item.Quantidade * item.PrecoUnitario)
                         </span>
                     </div>
-                </div>
-            }
-
-            <div class="row div_LinhaProdutoTabela" item-id="1">
-                <div class="col-md-5" style="padding-top: 5px">Teste</div>
-                <div class="col-md-2" style="padding-top: 5px">R$ 20,00</div>
-                <div class="col-md-2" style="padding-top: 5px">0001</div>
-                <div class="col-md-2" style="padding-top: 5px">
-                    R$ 20,00
-                </div>
-            </div>
-
-            <div class="row div_LinhaProdutoTabela" item-id="2">
-                <div class="col-md-5" style="padding-top: 5px">Teste</div>
-                <div class="col-md-2" style="padding-top: 5px">R$ 20,00</div>
-                <div class="col-md-2" style="padding-top: 5px">0001</div>
-                <div class="col-md-2" style="padding-top: 5px">
-                    R$ 20,00
-                </div>
-            </div>
-
+                </div>            }
+            <label style="color:white">.</label>
         </div>
 
     </div>
 
-</div>
-
-
-    @*<h3>Resumo do Pedido</h3>
-
-    <br />
-    <div class="panel panel-default">
-        <div class="panel-body">
-            <div class="row">
-                <div class="col-md-12">
-                    <h3>Nº do Pedido: @(Model.pedido.Id)</h3>
-                </div>
-            </div>
-            <hr />
-            <div class="row">
-                <div class="col-md-3">
-                    <h3>Seus Dados</h3>
-                    <div>@Model.pedido.Cliente.Nome</div>
-                    <div>@Model.pedido.Cliente.Telefone</div>
-                </div>
-                <div class="col-md-3">
-                    @Model.pedido.Cliente.Email
-                </div>
-                <div class="col-md-6">
-                    <h3>Endereço de Entrega</h3>
-                    <div>@Model.pedido.Cliente.Endereco @Model.pedido.Cliente.Complemento - @Model.pedido.Cliente.Bairro - CEP: @Model.pedido.Cliente.CEP - @Model.pedido.Cliente.Municipio - @Model.pedido.Cliente.UF - Brasil</div>
-                </div>
-            </div>
-            <hr />
-            <div class="row">
-                <div class="col-md-10">
-                    <h3>Item</h3>
-                </div>
-                <div class="col-md-2">
-                    <h3>Quantidade</h3>
-                </div>
-            </div>
-
-            @foreach (var item in Model.pedido.ItensPedido)
-            {
-
-
-                <div class="row">
-                    <div class="col-md-10">
-                        <div>@item.Produto.Nome</div>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="pull-right">@item.Quantidade</div>
-                    </div>
-                </div>}
-
+    <div class="div_ClienteCampos" style="height: 220px; width: 30%; float: left">
+        <div class="div_ClienteTitulo">
+            <h4>4. Custo e Envio</h4>
         </div>
-    </div>*@
+
+        <div>
+            <div class="div_CarrinhoDetalhes">
+                <label>Subtotal</label>
+                <div class="div_CarrinhoDetalhesValor">
+                    R$ <span class="pull-right" total>
+                        @(Model.pedido.VlTotalPedido)
+                    </span>
+                </div>
+            </div>
+
+            <div class="div_CarrinhoDetalhes">
+                <label>Desconto</label>
+                <div class="div_CarrinhoDetalhesValor">
+                    R$ <span class="pull-right" total>
+                        @(Model.pedido.VlDesconto)
+                    </span>
+                </div>
+            </div>
+
+            <div class="div_CarrinhoDetalhes" style="border-top-style: ridge; padding-top: 20px;">
+                <label style="margin-top: 6px;">Total</label>
+                <div class="div_CarrinhoDetalhesValor" style="font-size: 20px; font-weight:600">
+                    R$ <span class="pull-right" total>
+                        @(Model.pedido.VlTotalPedido - Model.pedido.VlDesconto)
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="div_ClienteCampos" style="height: 220px; width:65%; float:right">
+        <div class="div_ClienteTitulo">
+            <h4>5. Observações</h4>
+        </div>
+
+        <div style="padding: 0 40px 0 40px;">
+            <label>Para os casos de troca ou devolução segue as seguintes condições:</label><br /><br />
+            <label>A solicitação deve ocorrer no máximo em 20 dias úteis após o recebimento do produto e o mesmo ainda deve estar em sua embalagem original, acompanhado da etiqueta e sem danos aparentes. Após a confirmação da solicitação será possível optar pelas seguintes opções: produto do mesmo valor, reembolso/estorno ou vale trocas.</label>
+        </div>
+
+    </div>
+
+    <div class="form-group" id="div_ClienteBotoes">
+        <span class="input-group-btn" style="float: right; margin-left: 30px; width: 150px">
+            @*<a class="btn buttonPrimary"
+                asp-controller="Pedido"
+                asp-action="resumo" type="submit" style="padding-top: 9px">Continuar</a>*@
+
+            <button type="submit" class="btn buttonPrimary" style="padding-top: 9px">
+                Continuar
+            </button>
+        </span>
+
+        <span class="input-group-btn" style="float:left; width: 130px">
+            <a class="btn buttonSecundary" asp-controller="Pedido" asp-action="carrinho" type="submit" style="padding-top: 9px">
+                Anterior
+            </a>
+        </span>
+    </div>
+
+</div>

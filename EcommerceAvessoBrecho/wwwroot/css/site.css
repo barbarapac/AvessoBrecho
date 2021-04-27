@@ -478,6 +478,17 @@ h6 {
     margin-bottom: 41px;
 }
 
+.div_ResumoLinhaProdutoTabela {
+    font-family: Montserrat;
+    text-align: left;
+    font-size: 14px;
+    color: #17181D;
+    letter-spacing: 0px;
+    margin-bottom: 24px;
+    padding: 0 80px;
+    font-weight: 550;
+}
+
 
 .div_CarrinhoDetalhes {
     font-family: Montserrat;
@@ -495,8 +506,6 @@ h6 {
 
 .div_ClienteCampos {
     width: 100%;
-    margin-left: 80px;
-    margin-right: 80px;
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 16px;
 }
@@ -512,7 +521,7 @@ h6 {
     }
 
 .div_ClienteTitulo {
-    margin: 32px 0 40px 40px;
+    margin: 0 0 40px 40px;
 }
 
 
