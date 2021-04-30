@@ -20,16 +20,13 @@ namespace EcommerceAvessoBrecho.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Resumo(Cliente cliente)
         {
-            //if (ModelState.IsValid)
-            //{
-                await _pedidoRepository.UpdateClienteAsync(cliente);
+            if (!ModelState.IsValid) 
+                return View("Cliente");
 
-                var pedido = await _pedidoRepository.GetPedidoAsync();
-                ResumoViewModel resumoViewModel = new ResumoViewModel(pedido);
-
-                return base.View(resumoViewModel);
-            //}
-            //return RedirectToAction("Cliente");
+            await _pedidoRepository.UpdateClienteAsync(cliente);
+            var pedido = await _pedidoRepository.GetPedidoAsync();
+            ResumoViewModel resumoViewModel = new ResumoViewModel(pedido);
+            return base.View(resumoViewModel);
         }
 
         [HttpPost]

@@ -11,6 +11,11 @@ namespace EcommerceAvessoBrecho.ViewsModels
             Pesquisa = pesquisa;
         }
 
+        public BuscaProdutosViewModel(IList<Produto> produtos)
+        {
+            Produtos = produtos;
+        }
+
         public BuscaProdutosViewModel(Produto produto)
         {
             Produto = produto;

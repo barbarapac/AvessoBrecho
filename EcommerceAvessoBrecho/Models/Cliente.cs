@@ -18,8 +18,8 @@ namespace EcommerceAvessoBrecho.Models
         [DataMember]
         public string Email { get; set; } = "";
 
-        [Required(ErrorMessage = "CPF é obrigatório")]
-        [StringLength(11, ErrorMessage = "O CPF deve ter 11 caractéres")]
+        //[Required(ErrorMessage = "CPF é obrigatório")]
+        //[StringLength(11, ErrorMessage = "O CPF deve ter 11 caractéres")]
         [DataMember]
         public string CPF { get; set; } = "";
 

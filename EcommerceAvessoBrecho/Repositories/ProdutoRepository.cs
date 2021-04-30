@@ -35,7 +35,7 @@ namespace EcommerceAvessoBrecho.Repositories
 
             if (!string.IsNullOrEmpty(pesquisa))
             {
-                query = query.Where(q => q.Nome.Contains(pesquisa)
+                query = query.Where(q => (q.Nome.Contains(pesquisa) || q.Categoria.Nome.Contains(pesquisa))
                                          && q.Disponivel == true);
             }
 
@@ -45,13 +45,12 @@ namespace EcommerceAvessoBrecho.Repositories
             return new BuscaProdutosViewModel(await query.ToListAsync(), pesquisa);
         }
 
-        public async Task<IList<Produto>> GetProdutosPromocaoAsync()
+        public async Task<BuscaProdutosViewModel> GetProdutosPromocaoAsync()
         {
-
-            return await dbSet
-                    .Where(p => p.Disponivel == true && p.Promocao)
-                    .Include(prod => prod.Categoria)
-                    .ToListAsync();
+            return new BuscaProdutosViewModel(await dbSet
+                .Where(p => p.Disponivel == true && p.Promocao)
+                .Include(prod => prod.Categoria)
+                .ToListAsync());
         }
 
         public async Task SaveProdutosAsync(List<Roupa> roupas)

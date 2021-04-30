@@ -18,9 +18,9 @@
 
                 <div id="div_menu">
                     <a asp-area="" asp-controller="Produto" asp-action="PesquisaProduto">Novidades</a>
-                    <a class="aMenu" asp-area="" asp-controller="Produto" asp-action="PesquisaProduto">Roupas</a>
-                    <a class="aMenu" asp-area="" asp-controller="Produto" asp-action="PesquisaProduto">Calçados</a>
-                    <a class="aMenu" asp-area="" asp-controller="Produto" asp-action="PesquisaProduto">Promoções</a>
+                    <a class="aMenu" asp-area="" asp-controller="Produto" asp-action="PesquisaProduto" asp-route-pesquisa="Roupas">Roupas</a>
+                    <a class="aMenu" asp-area="" asp-controller="Produto" asp-action="PesquisaProduto" asp-route-pesquisa="Calçados">Calçados</a>
+                    <a class="aMenu" asp-area="" asp-controller="Produto" asp-action="PesquisaProduto" asp-route-promocao="true">Promoções</a>
                 </div>
 
                 <div id="div_icones">

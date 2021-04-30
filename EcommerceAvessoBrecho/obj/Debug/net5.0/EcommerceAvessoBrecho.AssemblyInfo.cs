@@ -11,6 +11,7 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("8d57c8e6-8f62-46d2-a6d4-f8b97e7e4405")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("EcommerceAvessoBrecho")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

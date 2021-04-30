@@ -9,7 +9,7 @@ namespace EcommerceAvessoBrecho.Repositories.IRepository
     {
         Task SaveProdutosAsync(List<Roupa> roupas);
         Task<IList<Produto>> GetProdutosAsync();
-        Task<IList<Produto>> GetProdutosPromocaoAsync();
+        Task<BuscaProdutosViewModel> GetProdutosPromocaoAsync();
         Task<BuscaProdutosViewModel> GetProdutosAsync(string pesquisa);
         Task<BuscaProdutosViewModel> GetProdutoById(int id);
     }
