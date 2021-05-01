@@ -7,9 +7,9 @@
 <div id="div_Home">
     <div id="div_HomeTop">
         <div id="div_HomeCaminho">
-            <a asp-area="" asp-controller="Home" asp-action="Index"><label class="labelCaminhoHome">@ViewData["Title"]</label></a>
+            <a class="aMenu" asp-area="" asp-controller="Produto" asp-action="PesquisaProduto"><label class="labelCaminhoHome">@ViewData["Title"]</label></a>
             <img src="~/images/keyboard_arrow_down-24px-2.svg" />
-            <label class="labelCaminhoHome">@ViewData["Title"]</label>
+            <label id="lbl_Caminho" class="labelCaminhoHome">Novidades</label>
         </div>
 
         <div id="div_HomeBusca">
@@ -56,9 +56,19 @@
                                 </a>
                             </div>
                             <div class="div_LegendaProduto">
-                                <label class="label_Descricao">@produto.Nome</label>
+                                <label class="label_Descricao">@produto.Nome | @produto.Marca</label>
                                 <br>
-                                <label class="label_Preco">R$ @produto.Preco</label>
+
+                                @if (produto.Promocao is true)
+                                {
+                                    <label class="label_Preco" style="color: #474747;text-decoration: line-through; font-weight:400">R$ @produto.Preco</label>
+                                    <label class="label_Preco">R$ @produto.PrecoPromocional</label>
+                                }
+                                else
+                                {
+                                    <label class="label_Preco">R$ @produto.Preco</label>
+                                }
+
                             </div>
                         </div>
                     }

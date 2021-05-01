@@ -40,7 +40,8 @@
     <label class="label_Condicao" style="padding-bottom: 50px">Condição</label><br />
     <label id="label_Preco">R$ @produto.Preco</label><br />
     <label class="label_Descricao" style="padding-bottom: 30px; padding-top: 10px;">Tamanho XX</label><br />
-    <a asp-area="" asp-controller="Produto" asp-action="PesquisaProduto" id="label_TabelaDeTamanho">TABELA DE TAMANHOS</a>
+    <a href="#" data-toggle="modal" data-target="#modalCamisa" style="color:#474747">TABELA DE TAMANHOS</a>
+    
     <br /><br /><br />
     <span class="input-group-btn">
         <button class="btn buttonPrimary" type="submit" style="width: 140px; padding-top: 9px" onclick="carrinho.clickAddProdPedido(@produto.Codigo)">
@@ -49,7 +50,11 @@
     </span>
 </div>
 
+
+
+
 @section Scripts
 {
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="~/js/carrinho.js"></script>
 }

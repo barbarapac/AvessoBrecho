@@ -232,7 +232,7 @@ h6 {
 #div_RodapeTabelaSubtotal {
     text-align: left;
     float: right;
-    margin-right: 118px;
+    margin-right: 70px;
     margin-top: 20px;
 }
 
@@ -433,9 +433,8 @@ h6 {
 }
 
 .div_LegendaProduto {
-    width: 136px;
     height: 44px;
-    margin: 16px 137px 0 24px;
+    margin: 16px 0 0 24px;
 }
 
 .label_Descricao {
@@ -530,4 +529,20 @@ h6 {
     text-align: left;
     font-size: 14px;
     color: #BDBDBD;
+}
+
+.modalCabecalho {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 550;
+    letter-spacing: 0px;
+    color: #17181D;
+}
+
+.modalLinha {
+    font-family: Montserrat;
+    font-size: 14px;
+    letter-spacing: 0px;
+    color: #17181D;
+    padding-top: 25px;
 }
