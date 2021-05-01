@@ -71,5 +71,12 @@ namespace EcommerceAvessoBrecho.Controllers
             await _pedidoRepository.AplicaCupomDescontoAsync(true);
             return RedirectToAction("carrinho");
         }
+
+        public async Task<IActionResult> FinalizaPedido()
+        {
+            var pedido = await _pedidoRepository.FinalizaPedidoAsync();
+            FinalizaPedidoViewModel finalizaPedidoViewModel = new FinalizaPedidoViewModel(pedido);
+            return base.View(finalizaPedidoViewModel);
+        }
     }
 }

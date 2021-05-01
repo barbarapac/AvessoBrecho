@@ -11,5 +11,6 @@ namespace EcommerceAvessoBrecho.Repositories.IRepository
         Task<ItemPedido> GetItemPedidoAsync(int itemPedidoId);
         Task<UpdateQuantidadeResponse> UpdateQuantidadeAsync(int itemPedidoId);
         Task AplicaCupomDescontoAsync(bool aplicaCupom = false);
+        Task<Pedido> FinalizaPedidoAsync(bool aplicaCupom = false);
     }
 }

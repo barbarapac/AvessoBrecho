@@ -49,7 +49,7 @@ namespace EcommerceAvessoBrecho.Repositories
 
             if (itemPedido == null)
             {
-                itemPedido = new ItemPedido(pedido, produto, 1, produto.Preco);
+                itemPedido = new ItemPedido(pedido, produto, 1, produto.Promocao ? produto.PrecoPromocional : produto.Preco);
                 await
                     context.Set<ItemPedido>()
                     .AddAsync(itemPedido);
@@ -125,7 +125,6 @@ namespace EcommerceAvessoBrecho.Repositories
         {
             var pedido = await GetPedidoAsync();
             await clienteRepository.UpdateAsync(pedido.Cliente.Id, cliente);
-            //httpHelper.ResetPedidoId();
             httpHelper.SetCliente(pedido.Cliente);
             return pedido;
         }
@@ -148,6 +147,13 @@ namespace EcommerceAvessoBrecho.Repositories
                 context.Set<Pedido>().Update(pedido);
                 await context.SaveChangesAsync();
             }
+        }
+
+        public async Task<Pedido> FinalizaPedidoAsync(bool aplicaCupom = false)
+        {
+            var pedido = await GetPedidoAsync();
+            httpHelper.ResetPedidoId();
+            return pedido;
         }
     }
 
