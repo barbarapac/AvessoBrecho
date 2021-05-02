@@ -47,7 +47,7 @@
             <div style="padding: 0 50px 0 50px;">
                 <div class="col-4" style="float:left">
                     <label class="control-label" for="endereco">Endereço</label>
-                    <input type="text" class="form-control" id="endereco" placeholder="Endereço"
+                    <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Endereço"
                            asp-for="@Model.Endereco">
                     <span asp-validation-for="@Model.Endereco" class="text-danger"></span>
                 </div>
@@ -59,7 +59,7 @@
                 </div>
                 <div class="col-4" style="float:left">
                     <label class="control-label" for="bairro">Bairro</label>
-                    <input type="text" class="form-control" id="bairro" placeholder="Bairro"
+                    <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro"
                            asp-for="@Model.Bairro">
                     <span asp-validation-for="@Model.Bairro" class="text-danger"></span>
                 </div>
@@ -67,7 +67,7 @@
 
                 <div class="col-4" style="float:left; margin-top: 35px">
                     <label class="control-label" for="municipio">Município</label>
-                    <input type="text" class="form-control" id="municipio" placeholder="Município"
+                    <input type="text" class="form-control" id="municipio" name="municipio" placeholder="Município"
                            asp-for="@Model.Municipio">
                     <span asp-validation-for="@Model.Municipio" class="text-danger"></span>
                 </div>
@@ -109,7 +109,8 @@
                 <div class="col-4" style="float:left; margin-top: 35px">
                     <label class="control-label" for="cep">CEP</label>
                     <input type="text" class="form-control" id="cep" placeholder="CEP"
-                           asp-for="@Model.CEP">
+                           asp-for="@Model.CEP"
+                           onkeyup="cliente.changePesquisarCEP()" maxlength="8">
                     <span asp-validation-for="@Model.CEP" class="text-danger"></span>
                 </div>
             </div>
@@ -134,3 +135,8 @@
         </div>
     </div>
 </form>
+
+@section Scripts
+{
+    <script src="~/js/cliente.js"></script>
+}

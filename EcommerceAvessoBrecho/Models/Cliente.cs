@@ -50,6 +50,7 @@ namespace EcommerceAvessoBrecho.Models
         public string Telefone { get; set; } = "";
 
         [Required(ErrorMessage = "CEP é obrigatório")]
+        [StringLength(8, ErrorMessage = "O CEP é inválido!")]
         [DataMember]
         public string CEP { get; set; } = "";
 
