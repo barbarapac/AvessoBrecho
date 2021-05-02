@@ -11,5 +11,7 @@
         public bool Promocao;
         public decimal PrecoPromocional;
         public string Marca { get; set; }
+        public string Tamanho { get; set; }
+        public string Condicao { get; set; }
     }
 }

@@ -4,14 +4,16 @@ using EcommerceAvessoBrecho.DataBase.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EcommerceAvessoBrecho.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210502213852_addProdutoTamanho")]
+    partial class addProdutoTamanho
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -158,10 +160,6 @@ namespace EcommerceAvessoBrecho.Migrations
                     b.Property<string>("Codigo")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Condicao")
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
 
                     b.Property<DateTime>("DataCadastro")
                         .HasColumnType("datetime2");

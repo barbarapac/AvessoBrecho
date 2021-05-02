@@ -67,7 +67,7 @@ namespace EcommerceAvessoBrecho.Repositories
                 {
                     await dbSet.AddAsync(new Produto(produto.Codigo, produto.Nome, produto.Descricao, 
                         produto.Preco, categoria, produto.Marca, produto.Promocao, 
-                        produto.PrecoPromocional, produto.SubDescricao));
+                        produto.PrecoPromocional, produto.SubDescricao, produto.Tamanho, produto.Condicao));
                 }
             }
             await context.SaveChangesAsync();

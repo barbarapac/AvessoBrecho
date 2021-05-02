@@ -10,7 +10,7 @@ namespace EcommerceAvessoBrecho.Models
         public Produto() { }
 
         public Produto(string codigo, string nome, string descricao, decimal preco, 
-            Categoria categoria, string marca, bool promocao, decimal precoPromocional, string subDescricao)
+            Categoria categoria, string marca, bool promocao, decimal precoPromocional, string subDescricao, string tamanho, string condicao)
         {
             this.Codigo = codigo;
             this.Nome = nome;
@@ -22,6 +22,8 @@ namespace EcommerceAvessoBrecho.Models
             this.Promocao = promocao;
             this.SubDescricao = subDescricao;
             this.PrecoPromocional = precoPromocional;
+            this.Tamanho = tamanho;
+            this.Condicao = condicao;
         }
 
         [DataMember]
@@ -62,6 +64,14 @@ namespace EcommerceAvessoBrecho.Models
 
         [DataMember]
         public bool Promocao { get; set; } = false;
+
+        [StringLength(5, ErrorMessage = "Tamanho deve ter em 1 e 5 caractéres", MinimumLength = 1)]
+        [DataMember]
+        public string Tamanho { get; set; } = "";
+
+        [StringLength(200, ErrorMessage = "Tamanho deve ter em 1 e 200 caractéres", MinimumLength = 1)]
+        [DataMember]
+        public string Condicao { get; set; } = "";
 
         [DataMember]
         public DateTime DataCadastro { get; private set; }
