@@ -2,9 +2,11 @@
 
 @model FinalizaPedidoViewModel;
 
-<div style="margin: 64px 0 64px 80px">
-    <h4>Pedido n° @(Model.pedido.Id)</h4>
-</div>
-
-<div style="height: 1500px">
+<div style="height: 84.5vh">
+    <div id="div_FinalizaPedido">
+        <h3>Pedido Confirmado</h3>
+        <label>@DateTime.Today.Day de @DateTime.Now.ToString("MMMM") de @DateTime.Today.Year</label><br /><br />
+        <label style="margin: 0; font-weight: 500">Seu pedido Nº <strong>@(Model.pedido.Id)</strong> foi processado com sucesso, e um e-mail de confirmação foi enviado a você</label><br />
+        <label style="margin-bottom: 64px; font-weight: 500">em <strong>@(Model.pedido.Cliente.Email)</strong> com todos os detalhes do pedido.</label>
+    </div>
 </div>

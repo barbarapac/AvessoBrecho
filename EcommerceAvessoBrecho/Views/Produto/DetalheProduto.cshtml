@@ -37,8 +37,7 @@
     <h4><label>@produto.Nome</label></h4>
     <h5><label style="padding-bottom: 30px">@produto.Marca</label></h5>
     <label class="label_Descricao" style="padding-bottom: 30px">@produto.Descricao</label><br />
-    <label class="label_Condicao" style="padding-bottom: 50px">Condição</label>
-    <label class="label_Descricao" style="padding-bottom: 30px">@produto.Condicao</label><br />
+    <label class="label_Condicao" style="padding-bottom: 50px">@produto.Condicao</label>
     <label id="label_Preco">R$ @if (produto.Promocao)@produto.PrecoPromocional else @produto.Preco</label><br />
     <label class="label_Descricao" style="padding-bottom: 30px; padding-top: 10px;">Tamanho @produto.Tamanho</label><br />
     <a href="#" data-toggle="modal" data-target="#modalCamisa" style="color:#474747">TABELA DE TAMANHOS</a>

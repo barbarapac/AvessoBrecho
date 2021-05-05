@@ -23,6 +23,14 @@ footer {
     opacity: 1;
 }
 
+h3 {
+    text-align: center;
+    font-weight: 550;
+    margin: 50px 0 5px 0;
+    font-size: 20px;
+    font-family: Montserrat;
+}
+
 h4 {
     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-24)/var(--unnamed-line-spacing-32) var(--unnamed-font-family-montserrat);
     letter-spacing: var(--unnamed-character-spacing-0);
@@ -259,6 +267,23 @@ h6 {
     margin-bottom: 21px;
     padding: 0 80px;
 }
+
+#div_FinalizaPedido {
+    background: #1cac491a 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #1CAC49;
+    border-radius: 16px;
+    opacity: 1;
+    text-align: center;
+    margin: 64px;
+}
+
+    #div_FinalizaPedido label {
+        font-family: Montserrat;
+        font-size: 14px;
+        color: #474747;
+        text-align: center;
+    }
 
 /*------------------------------- Classes -------------------------------*/
 .containerCSS {
