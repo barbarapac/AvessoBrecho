@@ -9,6 +9,7 @@ namespace EcommerceAvessoBrecho.Repositories.IRepository
         int? GetPedidoId();
         void SetPedidoId(int pedidoId);
         void ResetPedidoId();
+        void ResetClienteId();
         void SetCliente(Cliente cliente);
         Cliente GetCadastro();
     }

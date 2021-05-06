@@ -46,5 +46,10 @@ namespace EcommerceAvessoBrecho.Repositories
         {
             contextAccessor.HttpContext.Session.SetInt32("pedidoId", pedidoId);
         }
+
+        public void ResetClienteId()
+        {
+            contextAccessor.HttpContext.Session.Remove("cliente");
+        }
     }
 }

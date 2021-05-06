@@ -153,6 +153,7 @@ namespace EcommerceAvessoBrecho.Repositories
         {
             var pedido = await GetPedidoAsync();
             httpHelper.ResetPedidoId();
+            httpHelper.ResetClienteId();
             return pedido;
         }
     }
