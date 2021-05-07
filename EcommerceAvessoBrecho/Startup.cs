@@ -40,6 +40,7 @@ namespace EcommerceAvessoBrecho
             services.AddTransient<IClienteRepository, ClienteRepository>();
             services.AddTransient<IHttpHelper, HttpHelper>();
             services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddTransient<ISendEmailRepository, SendEmailRepository>();
             services.AddControllersWithViews();
 
         }
