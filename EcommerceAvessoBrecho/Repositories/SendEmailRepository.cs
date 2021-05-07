@@ -41,7 +41,7 @@ namespace EcommerceAvessoBrecho.Repositories.IRepository
                     smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                     smtp.UseDefaultCredentials = false; 
                     smtp.Credentials = new NetworkCredential(credenciais.Email, credenciais.Pass);
-                    //smtp.Send(mail);
+                    //smtp.Send(mail); PARA ENVIAR EMAIL SÓ DESCOMENTAR AQUI.
                 }
                 catch (Exception ex){ }
             }
