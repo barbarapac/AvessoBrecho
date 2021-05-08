@@ -40,8 +40,8 @@
     <label class="label_Condicao" style="padding-bottom: 50px">@produto.Condicao</label>
     <label id="label_Preco">R$ @if (produto.Promocao)@produto.PrecoPromocional else @produto.Preco</label><br />
     <label class="label_Descricao" style="padding-bottom: 30px; padding-top: 10px;">Tamanho @produto.Tamanho</label><br />
-    <a href="#" data-toggle="modal" data-target="#modalCamisa" style="color:#474747">TABELA DE TAMANHOS</a>
-
+    <a href="#" data-toggle="modal" data-target="#modalCalcado" style="color:#474747">TABELA DE MEDIDAS</a>
+                
     <br /><br /><br />
     <span class="input-group-btn">
         <button class="btn buttonPrimary" type="submit" style="width: 140px; padding-top: 9px" onclick="carrinho.clickAddProdPedido(@produto.Codigo)">

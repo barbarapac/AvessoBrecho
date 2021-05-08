@@ -265,7 +265,7 @@ h6 {
     color: #17181D;
     letter-spacing: 0px;
     margin-bottom: 21px;
-    padding: 0 80px;
+    padding: 0 40px;
 }
 
 #div_FinalizaPedido {
@@ -509,7 +509,7 @@ h6 {
     color: #17181D;
     letter-spacing: 0px;
     margin-bottom: 24px;
-    padding: 0 80px;
+    padding: 0 40px;
     font-weight: 550;
 }
 
@@ -546,6 +546,7 @@ h6 {
 
 .div_ClienteTitulo {
     margin: 0 0 40px 40px;
+    padding-top: 40px;
 }
 
 

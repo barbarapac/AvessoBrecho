@@ -162,7 +162,6 @@ C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\bin\Debug\net5.0\runtimes\win-arm
 C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.csprojAssemblyReference.cache
 C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.GeneratedMSBuildEditorConfig.editorconfig
 C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.AssemblyInfoInputs.cache
 C:\Projetos\AvessoBrecho\EcommerceAvessoBrecho\obj\Debug\net5.0\EcommerceAvessoBrecho.AssemblyInfo.cs

@@ -12,12 +12,12 @@
 
     <div style="height: 900px">
 
-        <div class="div_ClienteCampos" style="height: 180px">
+        <div class="div_ClienteCampos" style="height: 220px">
             <div class="div_ClienteTitulo">
                 <h4>1. Dados Pessoais</h4>
             </div>
 
-            <div style="padding: 0 50px 0 50px;">
+            <div style="padding: 0 25px 0 25px;">
                 <div class="form-group col-4" style="float:left">
                     <label class="control-label" for="nomeCliente">Nome do Cliente</label>
                     <input type="text" class="form-control" id="nomeCliente" placeholder="Nome do Cliente"
@@ -39,12 +39,12 @@
             </div>
         </div>
 
-        <div class="div_ClienteCampos" style="height: 280px">
+        <div class="div_ClienteCampos" style="height: 320px">
             <div class="div_ClienteTitulo" style="margin-top: 64px">
                 <h4>2. Endereço</h4>
             </div>
 
-            <div style="padding: 0 50px 0 50px;">
+            <div style="padding: 0 25px 0 25px;">
                 <div class="col-4" style="float:left">
                     <label class="control-label" for="endereco">Endereço</label>
                     <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Endereço"
@@ -122,7 +122,7 @@
                     asp-controller="Pedido"
                     asp-action="resumo" type="submit" style="padding-top: 9px">Continuar</a>*@
 
-                <button type="submit" class="btn buttonPrimary" style="padding-top: 9px">
+                <button id="btnContinuar" disabled="true" type="submit" class="btn buttonPrimary" style="padding-top: 9px">
                     Continuar
                 </button>
             </span>
@@ -138,5 +138,33 @@
 
 @section Scripts
 {
+
+    <script>
+        var nome = window.document.getElementById('nomeCliente');
+        var email = window.document.getElementById('email');
+        var telefone = window.document.getElementById('telefone');
+        var municipio = window.document.getElementById('municipio');
+        var estado = window.document.getElementsByName('UF')[0];
+        var cep = window.document.getElementById('cep');
+        var bairro = window.document.getElementById('bairro');
+
+        email.addEventListener('blur', validaPreenchimento);
+        nome.addEventListener('blur', validaPreenchimento);
+        telefone.addEventListener('blur', validaPreenchimento);
+        municipio.addEventListener('blur', validaPreenchimento);
+        estado.addEventListener('blur', validaPreenchimento);
+        cep.addEventListener('blur', validaPreenchimento);
+        bairro.addEventListener('blur', validaPreenchimento);
+
+        function validaPreenchimento() {
+            if (Number(email.value.length) > 5 && Number(nome.value.length) > 5 && Number(telefone.value.length) > 1 && Number(municipio.value.length) > 1 && Number(estado.value.length) > 1 && Number(cep.value.length) > 1 && Number(bairro.value.length) > 1) {
+                window.document.getElementById('btnContinuar').disabled = false;
+            } else {
+                window.document.getElementById('btnContinuar').disabled = true;
+            }
+        }
+
+    </script>
+
     <script src="~/js/cliente.js"></script>
 }
