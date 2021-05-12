@@ -148,13 +148,13 @@
         var cep = window.document.getElementById('cep');
         var bairro = window.document.getElementById('bairro');
 
-        email.addEventListener('blur', validaPreenchimento);
-        nome.addEventListener('blur', validaPreenchimento);
-        telefone.addEventListener('blur', validaPreenchimento);
-        municipio.addEventListener('blur', validaPreenchimento);
-        estado.addEventListener('blur', validaPreenchimento);
-        cep.addEventListener('blur', validaPreenchimento);
-        bairro.addEventListener('blur', validaPreenchimento);
+        email.addEventListener('keydown', validaPreenchimento);
+        nome.addEventListener('keydown', validaPreenchimento);
+        telefone.addEventListener('keydown', validaPreenchimento);
+        municipio.addEventListener('keydown', validaPreenchimento);
+        estado.addEventListener('keydown', validaPreenchimento);
+        cep.addEventListener('change', validaPreenchimento);
+        bairro.addEventListener('keydown', validaPreenchimento);
 
         function validaPreenchimento() {
             if (Number(email.value.length) > 5 && Number(nome.value.length) > 5 && Number(telefone.value.length) > 1 && Number(municipio.value.length) > 1 && Number(estado.value.length) > 1 && Number(cep.value.length) > 1 && Number(bairro.value.length) > 1) {
