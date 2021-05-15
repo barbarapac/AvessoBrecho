@@ -46,10 +46,11 @@
 
             <div style="padding: 0 25px 0 25px;">
                 <div class="col-4" style="float:left">
-                    <label class="control-label" for="endereco">Endereço</label>
-                    <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Endereço"
-                           asp-for="@Model.Endereco">
-                    <span asp-validation-for="@Model.Endereco" class="text-danger"></span>
+                    <label class="control-label" for="cep">CEP</label>
+                    <input type="text" class="form-control" id="cep" placeholder="CEP"
+                           asp-for="@Model.CEP"
+                           onkeyup="cliente.changePesquisarCEP()" maxlength="8">
+                    <span asp-validation-for="@Model.CEP" class="text-danger"></span>
                 </div>
                 <div class="col-4" style="float:left">
                     <label class="control-label" for="complemento">Complemento</label>
@@ -107,22 +108,17 @@
                     <span asp-validation-for="@Model.UF" class="text-danger"></span>
                 </div>
                 <div class="col-4" style="float:left; margin-top: 35px">
-                    <label class="control-label" for="cep">CEP</label>
-                    <input type="text" class="form-control" id="cep" placeholder="CEP"
-                           asp-for="@Model.CEP"
-                           onkeyup="cliente.changePesquisarCEP()" maxlength="8">
-                    <span asp-validation-for="@Model.CEP" class="text-danger"></span>
+                    <label class="control-label" for="endereco">Endereço</label>
+                    <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Endereço"
+                           asp-for="@Model.Endereco">
+                    <span asp-validation-for="@Model.Endereco" class="text-danger"></span>
                 </div>
             </div>
         </div>
 
         <div class="form-group" id="div_ClienteBotoes">
             <span class="input-group-btn" style="float: right; margin-left: 30px; width: 150px">
-                @*<a class="btn buttonPrimary"
-                    asp-controller="Pedido"
-                    asp-action="resumo" type="submit" style="padding-top: 9px">Continuar</a>*@
-
-                <button id="btnContinuar" disabled="true" type="submit" class="btn buttonPrimary" style="padding-top: 9px">
+                <button id="btnContinuar" type="submit" class="btn buttonPrimary" style="padding-top: 9px">
                     Continuar
                 </button>
             </span>
@@ -139,7 +135,7 @@
 @section Scripts
 {
 
-    <script>
+    @*<script>
         var nome = window.document.getElementById('nomeCliente');
         var email = window.document.getElementById('email');
         var telefone = window.document.getElementById('telefone');
@@ -164,7 +160,7 @@
             }
         }
 
-    </script>
+    </script>*@
 
     <script src="~/js/cliente.js"></script>
 }
